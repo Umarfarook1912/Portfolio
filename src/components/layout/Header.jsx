@@ -44,7 +44,7 @@ const Header = () => {
                             <a
                                 key={item.label}
                                 href={item.href}
-                                className="text-gray-600 hover:text-[#169b46] transition-colors text-base lg:text-lg font-medium"
+                                className="text-gray-600 hover:text-[#169b46] transition-colors text-base lg:text-md font-medium"
                             >
                                 {item.label}
                             </a>
