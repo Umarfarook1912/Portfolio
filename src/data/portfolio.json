@@ -1,0 +1,150 @@
+{
+    "hero": {
+        "name": "Umar Farook J",
+        "title": "Full Stack Developer",
+        "description": "Passionate developer with expertise in building modern web applications. I love creating elegant solutions to complex problems and bringing ideas to life through code.",
+        "image": "/profile.jpg"
+    },
+    "workExperience": [
+        {
+            "title": "Senior Full Stack Developer",
+            "company": "Tech Company",
+            "startDate": "Jan 2022",
+            "endDate": "Present",
+            "description": "Leading development of enterprise web applications using React, Node.js, and cloud technologies. Mentoring junior developers and implementing best practices.",
+            "githubUrl": "https://github.com/yourusername/project",
+            "projectUrl": "https://example.com"
+        },
+        {
+            "title": "Full Stack Developer",
+            "company": "Startup Inc",
+            "startDate": "Jun 2020",
+            "endDate": "Dec 2021",
+            "description": "Developed and maintained multiple client projects using modern web technologies. Collaborated with cross-functional teams to deliver high-quality products.",
+            "githubUrl": "https://github.com/yourusername/project2",
+            "projectUrl": "https://example2.com"
+        }
+    ],
+    "projects": [
+        {
+            "title": "E-Commerce Platform",
+            "description": "A full-featured e-commerce platform with payment integration, inventory management, and admin dashboard.",
+            "githubUrl": "https://github.com/yourusername/ecommerce",
+            "projectUrl": "https://ecommerce-demo.com"
+        },
+        {
+            "title": "Task Management App",
+            "description": "A collaborative task management application with real-time updates and team features.",
+            "githubUrl": "https://github.com/yourusername/taskapp",
+            "projectUrl": "https://taskapp-demo.com"
+        },
+        {
+            "title": "Portfolio Generator",
+            "description": "A tool to generate beautiful portfolio websites with customizable themes and components.",
+            "githubUrl": "https://github.com/yourusername/portfolio-gen",
+            "projectUrl": "https://portfolio-gen.com"
+        }
+    ],
+    "education": [
+        {
+            "college": "University Name",
+            "degree": "Bachelor of Technology in Computer Science",
+            "year": "2016 - 2020"
+        },
+        {
+            "college": "High School Name",
+            "degree": "Higher Secondary Education",
+            "year": "2014 - 2016"
+        }
+    ],
+    "technicalSkills": [
+        {
+            "name": "JavaScript",
+            "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+            "proficiency": 90
+        },
+        {
+            "name": "React",
+            "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+            "proficiency": 85
+        },
+        {
+            "name": "Node.js",
+            "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+            "proficiency": 80
+        },
+        {
+            "name": "Python",
+            "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+            "proficiency": 75
+        },
+        {
+            "name": "TypeScript",
+            "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+            "proficiency": 85
+        },
+        {
+            "name": "MongoDB",
+            "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+            "proficiency": 70
+        },
+        {
+            "name": "Git",
+            "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+            "proficiency": 80
+        },
+        {
+            "name": "Docker",
+            "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+            "proficiency": 65
+        }
+    ],
+    "internships": [
+        {
+            "domain": "Web Development",
+            "company": "Tech Solutions Ltd",
+            "startDate": "May 2019",
+            "endDate": "Aug 2019",
+            "projectDescription": "Developed responsive web applications using React and integrated REST APIs. Contributed to the company's main product dashboard."
+        },
+        {
+            "domain": "Backend Development",
+            "company": "Software Corp",
+            "startDate": "Jan 2019",
+            "endDate": "Apr 2019",
+            "projectDescription": "Built RESTful APIs using Node.js and Express. Implemented database schemas and optimized query performance."
+        }
+    ],
+    "certifications": [
+        {
+            "title": "AWS Certified Solutions Architect",
+            "certificateUrl": "https://example.com/certificate1"
+        },
+        {
+            "title": "React Developer Certification",
+            "certificateUrl": "https://example.com/certificate2"
+        },
+        {
+            "title": "Full Stack Web Development",
+            "certificateUrl": "https://example.com/certificate3"
+        }
+    ],
+    "achievements": [
+        {
+            "title": "Hackathon Winner 2023",
+            "description": "Won first place in a national level hackathon with an innovative healthcare solution."
+        },
+        {
+            "title": "Open Source Contributor",
+            "description": "Active contributor to popular open-source projects with 500+ stars on GitHub."
+        },
+        {
+            "title": "Best Project Award",
+            "description": "Received the best final year project award for developing an AI-powered learning platform."
+        },
+        {
+            "title": "Technical Blog",
+            "description": "Maintain a technical blog with 10,000+ monthly readers sharing knowledge about web development."
+        }
+    ]
+}
