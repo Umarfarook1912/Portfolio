@@ -1,8 +1,10 @@
 import { useForm } from 'react-hook-form';
 import { FaPaperPlane, FaUser, FaEnvelope, FaEdit, FaCommentDots } from 'react-icons/fa';
 import { Section, Container, SectionTitle } from '../ui';
+import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 const Contact = () => {
+    const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 });
     const {
         register,
         handleSubmit,
@@ -32,7 +34,7 @@ const Contact = () => {
                 />
 
                 <div className="max-w-3xl mx-auto">
-                    <div className="bg-white rounded-2xl p-8 md:p-10 shadow-2xl border border-gray-100">
+                    <div ref={ref} className={`bg-white rounded-2xl p-8 md:p-10 shadow-2xl border border-gray-100 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                             {/* Name Field */}
                             <div>

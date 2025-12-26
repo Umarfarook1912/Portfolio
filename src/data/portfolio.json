@@ -104,73 +104,61 @@
         {
             "name": "JavaScript",
             "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-            "proficiency": 85,
             "category": "Frontend"
         },
         {
             "name": "React",
             "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-            "proficiency": 90,
             "category": "Frontend"
         },
         {
             "name": "HTML",
             "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-            "proficiency": 98,
             "category": "Frontend"
         },
         {
             "name": "CSS",
             "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-            "proficiency": 85,
             "category": "Frontend"
         },
         {
             "name": "Bootstrap",
             "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-            "proficiency": 95,
             "category": "Frontend"
         },
         {
             "name": "Node.js",
             "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-            "proficiency": 90,
             "category": "Backend"
         },
         {
             "name": "Express.js",
             "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-            "proficiency": 89,
             "category": "Backend"
         },
         {
             "name": "Java",
             "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-            "proficiency": 85,
             "category": "Language"
         },
         {
             "name": "TypeScript",
             "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-            "proficiency": 85,
             "category": "Language"
         },
         {
             "name": "MongoDB",
             "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-            "proficiency": 90,
             "category": "Database"
         },
         {
             "name": "Git",
             "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-            "proficiency": 95,
             "category": "Tools"
         },
         {
             "name": "GitHub",
             "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-            "proficiency": 95,
             "category": "Tools"
         }
     ],

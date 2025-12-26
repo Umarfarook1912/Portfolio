@@ -29,15 +29,14 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 mb-8">
                     {/* About Section */}
                     <div>
-                        <h3 className="text-xl font-bold mb-4 text-black">About</h3>
-                        <p className="text-black text-sm leading-relaxed mb-4">
+                        <h3 className="text-xl font-bold mb-4 text-white">About</h3>
+                        <p className="text-white text-sm leading-relaxed mb-4">
                             Full Stack Developer passionate about building modern web applications.
                             Currently working as a Software Engineer at Sukiran Solutions,
                             with expertise in MERN stack and experience as a Co-founder of StubLab.
                         </p>
                         <div className="flex flex-col space-y-2 text-sm">
-                            
-                            <div className="flex items-center text-black">
+                            <div className="flex items-center text-white">
                                 <FaMapMarkerAlt className="mr-2" />
                                 Dindigul, Tamil Nadu
                             </div>
@@ -46,13 +45,13 @@ const Footer = () => {
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className="text-xl font-bold mb-4 text-black">Quick Links</h3>
+                        <h3 className="text-xl font-bold mb-4 text-white">Quick Links</h3>
                         <ul className="space-y-2">
                             {quickLinks.map((link) => (
                                 <li key={link.name}>
                                     <a
                                         href={link.href}
-                                        className="text-black hover:text-gray-200 transition-colors text-sm"
+                                        className="text-white hover:text-gray-200 transition-colors text-sm"
                                     >
                                         {link.name}
                                     </a>
@@ -63,7 +62,7 @@ const Footer = () => {
 
                     {/* Connect */}
                     <div>
-                        <h3 className="text-xl font-bold mb-4 text-black">Connect with Me</h3>
+                        <h3 className="text-xl font-bold mb-4 text-white">Connect with Me</h3>
                         <div className="flex items-center md:items-start space-x-4">
                             {socialIcons.map(({ Icon, href, label }) => (
                                 <a
@@ -71,7 +70,7 @@ const Footer = () => {
                                     href={href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-black hover:text-gray-200 transition-all duration-300 transform hover:scale-110"
+                                    className="text-white hover:text-gray-200 transition-all duration-300 transform hover:scale-110"
                                     aria-label={label}
                                 >
                                     <Icon className="w-5 h-5" />
@@ -82,12 +81,12 @@ const Footer = () => {
                 </div>
 
                 {/* Divider */}
-                <div className="w-full h-px bg-black opacity-30 my-6"></div>
+                <div className="w-full h-px bg-white opacity-30 my-6"></div>
 
                 {/* Bottom Section */}
                 <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                     <div className="text-center md:text-left">
-                        <p className="text-black text-sm">
+                        <p className="text-white text-sm">
                             &copy; {currentYear} <span className="font-semibold">Umar Farook J</span>. All rights reserved.
                         </p>
                     </div>

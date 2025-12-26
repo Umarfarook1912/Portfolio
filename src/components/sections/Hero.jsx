@@ -1,9 +1,12 @@
 import PropTypes from 'prop-types';
 import Container from '../ui/Container';
+import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 const Hero = ({ data }) => {
+    const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 });
+
     return (
-        <section id="home" className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+        <section ref={ref} id="home" className={`relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden bg-gradient-to-br from-gray-50 to-white transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             {/* Wavy Green Shape Background (hidden on small screens) */}
             <div className="hidden md:block absolute inset-0 overflow-hidden pointer-events-none">
                 {/* Bottom left wave */}
