@@ -13,18 +13,18 @@ const Internship = ({ data }) => {
 
                 <div className="max-w-3xl mx-auto space-y-6">
                     {data.map((internship, index) => (
-                        <div key={index} className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-l-4 border-[#169b46] hover:border-[#50ca71]">
+                        <div key={index} className="group relative bg-white rounded-2xl p-5 sm:p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-l-4 border-[#169b46] hover:border-[#50ca71]">
                             {/* Timeline dot */}
                             <div className="absolute -left-3 top-8 w-6 h-6 bg-[#169b46] rounded-full border-4 border-white group-hover:scale-125 transition-transform duration-300"></div>
 
-                            <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                            <div className="flex flex-col gap-3 mb-4">
                                 <div className="flex-1">
                                     {/* Icon and Domain */}
                                     <div className="flex items-center gap-3 mb-3">
                                         <div className="w-12 h-12 bg-gradient-to-br from-[#169b46] to-[#50ca71] rounded-lg flex items-center justify-center">
                                             <FaLaptopCode className="w-6 h-6 text-white" />
                                         </div>
-                                        <h3 className="text-xl font-bold text-gray-900">
+                                        <h3 className="text-lg sm:text-xl font-bold text-gray-900">
                                             {internship.domain}
                                         </h3>
                                     </div>
@@ -37,9 +37,9 @@ const Internship = ({ data }) => {
                                 </div>
 
                                 {/* Date */}
-                                <div className="flex items-center text-gray-500 text-sm md:ml-4">
+                                <div className="flex items-center text-gray-500 text-sm">
                                     <FaCalendarAlt className="w-4 h-4 mr-2" />
-                                    <span>{internship.startDate} - {internship.endDate}</span>
+                                    <span className="text-xs sm:text-sm">{internship.startDate} - {internship.endDate}</span>
                                 </div>
                             </div>
 

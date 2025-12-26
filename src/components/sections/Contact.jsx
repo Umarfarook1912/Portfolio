@@ -53,7 +53,7 @@ const Contact = () => {
                                 />
                                 {errors.name && (
                                     <p className="text-red-500 text-sm mt-1.5 flex items-center gap-1">
-                                         {errors.name.message}
+                                        {errors.name.message}
                                     </p>
                                 )}
                             </div>
@@ -80,7 +80,7 @@ const Contact = () => {
                                 />
                                 {errors.email && (
                                     <p className="text-red-500 text-sm mt-1.5 flex items-center gap-1">
-                                         {errors.email.message}
+                                        {errors.email.message}
                                     </p>
                                 )}
                             </div>
@@ -104,7 +104,7 @@ const Contact = () => {
                                 />
                                 {errors.subject && (
                                     <p className="text-red-500 text-sm mt-1.5 flex items-center gap-1">
-                                         {errors.subject.message}
+                                        {errors.subject.message}
                                     </p>
                                 )}
                             </div>
@@ -128,7 +128,7 @@ const Contact = () => {
                                 ></textarea>
                                 {errors.message && (
                                     <p className="text-red-500 text-sm mt-1.5 flex items-center gap-1">
-                                         {errors.message.message}
+                                        {errors.message.message}
                                     </p>
                                 )}
                             </div>

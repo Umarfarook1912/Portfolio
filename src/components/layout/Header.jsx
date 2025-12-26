@@ -7,10 +7,10 @@ const Header = () => {
 
     const navItems = [
         { label: 'About', href: '#home' },
-        { label: 'Services', href: '#experience' },
-        { label: 'Resume', href: '#education' },
+        { label: 'Experience', href: '#experience' },
         { label: 'Projects', href: '#projects' },
-        { label: 'Testimonials', href: '#achievements' },
+        { label: 'Education', href: '#education' },
+        { label: 'Achievements', href: '#achievements' },
         { label: 'Contact', href: '#contact' },
     ];
 
@@ -32,10 +32,10 @@ const Header = () => {
                     {/* Logo */}
                     <a
                         href="#home"
-                        className="text-2xl font-bold text-gray-800"
+                        className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800"
                     >
-                        <span className="text-gray-800 text-md">Umar Farook</span>{' '}
-                        <span className="text-[#169b46] text-md">J</span>
+                        <span className="text-gray-800">Umar Farook</span>{' '}
+                        <span className="text-[#169b46]">J</span>
                     </a>
 
                     {/* Desktop Navigation */}
@@ -44,7 +44,7 @@ const Header = () => {
                             <a
                                 key={item.label}
                                 href={item.href}
-                                className="text-gray-600 hover:text-[#169b46] transition-colors text-lg font-medium"
+                                className="text-gray-600 hover:text-[#169b46] transition-colors text-base lg:text-lg font-medium"
                             >
                                 {item.label}
                             </a>
@@ -57,9 +57,9 @@ const Header = () => {
                             href="/resume/Umar%20Farook%20J_Resume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center px-6 py-2.5 bg-[#169b46] hover:bg-[#50ca71] text-white rounded-full font-medium transition-all duration-300 text-md shadow-lg shadow-green-200"
+                            className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-2.5 text-sm sm:text-base bg-[#169b46] hover:bg-[#50ca71] text-white rounded-full font-medium transition-all duration-300 shadow-lg shadow-green-200"
                         >
-                            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                             </svg>
                             Download CV
@@ -99,7 +99,7 @@ const Header = () => {
                             href="/resume/Umar%20Farook%20J_Resume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="block mt-4 px-6 py-2.5 bg-[#169b46] hover:bg-[#50ca71] text-white rounded-full font-medium transition-all duration-300 text-sm text-center"
+                            className="block mt-4 px-5 py-2.5 bg-[#169b46] hover:bg-[#50ca71] text-white rounded-full font-medium transition-all duration-300 text-sm text-center"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
                             Download CV

@@ -20,7 +20,7 @@ const Projects = ({ data }) => {
 
                             {/* Project Image header: use provided image when available, otherwise fallback to a neutral header */}
                             {project.imageUrl ? (
-                                <div className="relative h-64 overflow-hidden">
+                                <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
                                     <img
                                         src={project.imageUrl}
                                         alt={project.title}
@@ -28,24 +28,24 @@ const Projects = ({ data }) => {
                                     />
                                 </div>
                             ) : (
-                                <div className="relative h-64 bg-gradient-to-br from-gray-50 to-gray-100" />
+                                <div className="relative h-48 sm:h-56 md:h-64 bg-gradient-to-br from-gray-50 to-gray-100" />
                             )}
 
                             {/* Project Details */}
-                            <div className="relative p-6 z-20">
-                                <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight">{project.title}</h3>
-                                <p className="text-gray-600 mb-6 leading-relaxed text-sm min-h-[4rem]">
+                            <div className="relative p-4 sm:p-5 md:p-6 z-20">
+                                <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-3 leading-tight">{project.title}</h3>
+                                <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm min-h-[3rem] sm:min-h-[4rem]">
                                     {project.description}
                                 </p>
 
                                 {/* Action Buttons */}
-                                <div className="flex items-center gap-3">
+                                <div className="flex flex-row flex-wrap items-center gap-2 sm:gap-3">
                                     {project.githubUrl && (
                                         <a
                                             href={project.githubUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gray-100 hover:bg-gray-900 text-gray-700 hover:text-white rounded-xl transition-all duration-300 text-sm font-semibold shadow-sm hover:shadow-md"
+                                            className="flex items-center justify-center gap-2 px-4 py-3 bg-gray-100 hover:bg-gray-900 text-gray-700 hover:text-white rounded-xl transition-all duration-300 text-sm font-semibold shadow-sm hover:shadow-md"
                                         >
                                             <FaGithub className="w-4 h-4" />
                                             Code
@@ -56,7 +56,7 @@ const Projects = ({ data }) => {
                                             href={project.projectUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-[#169b46] to-[#50ca71] hover:from-[#50ca71] hover:to-[#169b46] text-white rounded-xl transition-all duration-300 text-sm font-semibold shadow-md shadow-green-200 hover:shadow-lg hover:shadow-green-300"
+                                            className="flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-[#169b46] to-[#50ca71] hover:from-[#50ca71] hover:to-[#169b46] text-white rounded-xl transition-all duration-300 text-sm font-semibold shadow-md shadow-green-200 hover:shadow-lg hover:shadow-green-300"
                                         >
                                             <FaExternalLinkAlt className="w-4 h-4" />
                                             Live

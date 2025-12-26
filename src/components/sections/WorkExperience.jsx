@@ -13,7 +13,7 @@ const WorkExperience = ({ data }) => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     {data.map((experience, index) => (
-                        <div key={index} className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+                        <div key={index} className="group relative bg-white rounded-2xl p-5 sm:p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
                             {/* Background gradient decorations */}
                             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#169b46] to-[#50ca71] opacity-5 rounded-full blur-2xl group-hover:opacity-10 transition-opacity"></div>
                             <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[#50ca71] to-[#169b46] opacity-5 rounded-full blur-xl group-hover:opacity-10 transition-opacity"></div>
@@ -34,7 +34,7 @@ const WorkExperience = ({ data }) => {
                             )}
 
                             {/* Title */}
-                            <h3 className="relative text-xl font-bold text-gray-900 mb-2 leading-tight">
+                            <h3 className="relative text-lg sm:text-xl font-bold text-gray-900 mb-2 leading-tight">
                                 {experience.title}
                             </h3>
 
@@ -56,7 +56,7 @@ const WorkExperience = ({ data }) => {
 
                             {/* Links with enhanced buttons */}
                             {(experience.githubUrl || experience.projectUrl) && (
-                                <div className="relative flex gap-3 pt-4 border-t border-gray-100">
+                                <div className="relative flex flex-row flex-wrap items-center gap-2 sm:gap-3 pt-4 border-t border-gray-100">
                                     {experience.githubUrl && (
                                         <a
                                             href={experience.githubUrl}
