@@ -59,7 +59,9 @@ const Hero = ({ data }) => {
                         {/* CTA Buttons */}
                         <div className="flex flex-wrap gap-4">
                             <a
-                                href="#contact"
+                                href="/resume/Umar Farook J_Resume.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="inline-flex items-center px-8 py-3.5 bg-[#169b46] hover:bg-[#50ca71] text-white rounded-full font-semibold transition-all duration-300 shadow-lg shadow-green-200 hover:shadow-xl hover:shadow-green-300 transform hover:-translate-y-0.5"
                             >
                                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

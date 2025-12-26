@@ -1,10 +1,8 @@
 import PropTypes from 'prop-types';
-import { FaTrophy, FaStar, FaAward, FaMedal } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaTrophy } from 'react-icons/fa';
 import { Section, Container, SectionTitle } from '../ui';
 
 const Achievements = ({ data }) => {
-    const icons = [FaTrophy, FaStar, FaAward, FaMedal];
-
     return (
         <Section id="achievements" background="white">
             <Container>
@@ -13,32 +11,40 @@ const Achievements = ({ data }) => {
                     subtitle="Recognition and accomplishments"
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                    {data.map((achievement, index) => {
-                        const Icon = icons[index % icons.length];
-                        return (
-                            <div key={index} className="group bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 border border-gray-100">
-                                <div className="flex items-start gap-4">
-                                    {/* Icon */}
-                                    <div className="flex-shrink-0">
-                                        <div className="w-14 h-14 bg-gradient-to-br from-[#169b46] to-[#50ca71] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                            <Icon className="w-7 h-7 text-white" />
-                                        </div>
-                                    </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {data.map((achievement, index) => (
+                        <div key={index} className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+                            {/* Background decoration */}
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#169b46] to-[#50ca71] opacity-5 rounded-full blur-2xl group-hover:opacity-10 transition-opacity"></div>
+                            <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[#50ca71] to-[#169b46] opacity-5 rounded-full blur-xl group-hover:opacity-10 transition-opacity"></div>
 
-                                    {/* Content */}
-                                    <div className="flex-1">
-                                        <h3 className="text-lg font-bold text-gray-900 mb-2 leading-tight">
-                                            {achievement.title}
-                                        </h3>
-                                        <p className="text-gray-600 leading-relaxed text-sm">
-                                            {achievement.description}
-                                        </p>
-                                    </div>
+                            {/* Achievement Details */}
+                            <div className="relative p-6">
+                                {/* Icon Badge */}
+                                <div className="w-14 h-14 bg-gradient-to-br from-[#169b46] to-[#50ca71] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-green-200">
+                                    <FaTrophy className="w-7 h-7 text-white" />
                                 </div>
+
+                                <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight">{achievement.title}</h3>
+                                <p className="text-gray-600 mb-6 leading-relaxed text-sm min-h-[4rem]">
+                                    {achievement.description}
+                                </p>
+
+                                {/* View Certificate Button */}
+                                {achievement.certificateUrl && (
+                                    <a
+                                        href={achievement.certificateUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-gradient-to-r from-[#169b46] to-[#50ca71] hover:from-[#50ca71] hover:to-[#169b46] text-white rounded-xl transition-all duration-300 text-sm font-semibold shadow-md shadow-green-200 hover:shadow-lg hover:shadow-green-300"
+                                    >
+                                        <FaExternalLinkAlt className="w-4 h-4" />
+                                        View Certificate
+                                    </a>
+                                )}
                             </div>
-                        );
-                    })}
+                        </div>
+                    ))}
                 </div>
             </Container>
         </Section>
@@ -50,6 +56,8 @@ Achievements.propTypes = {
         PropTypes.shape({
             title: PropTypes.string.isRequired,
             description: PropTypes.string.isRequired,
+            certificateUrl: PropTypes.string,
+            imageUrl: PropTypes.string,
         })
     ).isRequired,
 };

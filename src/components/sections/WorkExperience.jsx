@@ -13,53 +13,56 @@ const WorkExperience = ({ data }) => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     {data.map((experience, index) => (
-                        <div key={index} className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
-                            {/* Icon / Company logo if provided (no green background).
-                                Hide the whole area when there's no projectUrl and no logoUrl. */}
+                        <div key={index} className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+                            {/* Background gradient decorations */}
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#169b46] to-[#50ca71] opacity-5 rounded-full blur-2xl group-hover:opacity-10 transition-opacity"></div>
+                            <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[#50ca71] to-[#169b46] opacity-5 rounded-full blur-xl group-hover:opacity-10 transition-opacity"></div>
+
+                            {/* Icon / Company logo with gradient background */}
                             {(experience.projectUrl || experience.logoUrl) && (
-                                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 overflow-hidden">
+                                <div className="relative w-16 h-16  rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 overflow-hidden shadow-lg shadow-green-100">
                                     {experience.logoUrl ? (
                                         <img
                                             src={experience.logoUrl}
                                             alt={experience.company}
-                                            className="w-12 h-12 object-contain"
+                                            className="w-10 h-10 object-contain"
                                         />
                                     ) : (
-                                        <FaBriefcase className="w-8 h-8 text-gray-400" />
+                                        <FaBriefcase className="w-7 h-7 text-white" />
                                     )}
                                 </div>
                             )}
 
                             {/* Title */}
-                            <h3 className="text-xl font-bold text-gray-900 mb-2">
+                            <h3 className="relative text-xl font-bold text-gray-900 mb-2 leading-tight">
                                 {experience.title}
                             </h3>
 
                             {/* Company */}
-                            <p className="text-[#169b46] font-semibold mb-3">
+                            <p className="relative text-[#169b46] font-semibold mb-3">
                                 {experience.company}
                             </p>
 
                             {/* Date */}
-                            <div className="flex items-center text-gray-500 text-sm mb-4">
+                            <div className="relative flex items-center text-gray-500 text-sm mb-4">
                                 <FaCalendarAlt className="w-4 h-4 mr-2" />
                                 <span>{experience.startDate} - {experience.endDate}</span>
                             </div>
 
                             {/* Description */}
-                            <p className="text-gray-600 leading-relaxed mb-6 text-sm">
+                            <p className="relative text-gray-600 leading-relaxed mb-6 text-sm min-h-[4rem]">
                                 {experience.description}
                             </p>
 
-                            {/* Links */}
+                            {/* Links with enhanced buttons */}
                             {(experience.githubUrl || experience.projectUrl) && (
-                                <div className="flex gap-3 pt-4 border-t border-gray-100">
+                                <div className="relative flex gap-3 pt-4 border-t border-gray-100">
                                     {experience.githubUrl && (
                                         <a
                                             href={experience.githubUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex items-center gap-2 text-gray-600 hover:text-[#169b46] transition-colors text-sm font-medium"
+                                            className="flex items-center gap-2 px-4 py-2.5 bg-gray-100 hover:bg-gray-900 text-gray-700 hover:text-white rounded-xl transition-all duration-300 text-sm font-semibold shadow-sm hover:shadow-md"
                                         >
                                             <FaGithub className="w-4 h-4" />
                                             View Code
@@ -70,7 +73,7 @@ const WorkExperience = ({ data }) => {
                                             href={experience.projectUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex items-center gap-2 text-gray-600 hover:text-[#169b46] transition-colors text-sm font-medium"
+                                            className="flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-[#169b46] to-[#50ca71] hover:from-[#50ca71] hover:to-[#169b46] text-white rounded-xl transition-all duration-300 text-sm font-semibold shadow-md shadow-green-200 hover:shadow-lg hover:shadow-green-300"
                                         >
                                             <FaExternalLinkAlt className="w-4 h-4" />
                                             Visit Site

@@ -5,11 +5,10 @@ import {
   WorkExperience,
   Projects,
   Education,
-  TechnicalSkills,
-  Internship,
   Certifications,
   Achievements,
   Contact,
+  TechnicalSkills
 } from './components/sections';
 import portfolioData from './data/portfolio.json';
 import './index.css';
@@ -34,7 +33,6 @@ function App() {
           <Projects data={portfolioData.projects} />
           <Education data={portfolioData.education} />
           <TechnicalSkills data={portfolioData.technicalSkills} />
-          <Internship data={portfolioData.internships} />
           <Certifications data={portfolioData.certifications} />
           <Achievements data={portfolioData.achievements} />
           <Contact />

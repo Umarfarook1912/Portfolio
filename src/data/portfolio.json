@@ -65,110 +65,135 @@
         {
             "college": "SSM Institute of Engineering and Technology, Dindigul",
             "degree": "B.E. Computer Science and Engineering",
-            "year": "2021 - 2025",
-            "percentage": "88%"
+            "year": "2021 - 2025"
         },
         {
             "college": "St. Mary's Higher Secondary School, Dindigul",
             "degree": "HSC",
-            "year": "2021",
-            "percentage": "94%"
+            "year": "2021"
         },
         {
             "college": "St. Mary's Higher Secondary School, Dindigul",
             "degree": "SSLC",
-            "year": "2019",
-            "percentage": "92%"
+            "year": "2019"
+        }
+    ],
+    "workshops": [
+        {
+            "title": "App Development Using Flutter",
+            "organizer": "Accent Techno Soft",
+            "date": "18/01/2024 - 24/01/2024"
+        },
+        {
+            "title": "Web Technology",
+            "organizer": "Silicon Software Technology",
+            "date": "06/03/2023 - 17/03/2023"
+        },
+        {
+            "title": "Data Science with Python",
+            "organizer": "Channel B.Tech",
+            "date": "01/12/2022 - 02/12/2022"
+        },
+        {
+            "title": "App Development Using Java and Python",
+            "organizer": "Spot Light",
+            "date": "21/10/2022"
         }
     ],
     "technicalSkills": [
         {
             "name": "JavaScript",
             "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-            "proficiency": 90
+            "proficiency": 85,
+            "category": "Frontend"
         },
         {
             "name": "React",
             "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-            "proficiency": 85
+            "proficiency": 90,
+            "category": "Frontend"
+        },
+        {
+            "name": "HTML",
+            "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+            "proficiency": 98,
+            "category": "Frontend"
+        },
+        {
+            "name": "CSS",
+            "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+            "proficiency": 85,
+            "category": "Frontend"
+        },
+        {
+            "name": "Bootstrap",
+            "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+            "proficiency": 95,
+            "category": "Frontend"
         },
         {
             "name": "Node.js",
             "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-            "proficiency": 80
+            "proficiency": 90,
+            "category": "Backend"
         },
         {
-            "name": "Python",
-            "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-            "proficiency": 75
+            "name": "Express.js",
+            "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+            "proficiency": 89,
+            "category": "Backend"
+        },
+        {
+            "name": "Java",
+            "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+            "proficiency": 85,
+            "category": "Language"
         },
         {
             "name": "TypeScript",
             "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-            "proficiency": 85
+            "proficiency": 85,
+            "category": "Language"
         },
         {
             "name": "MongoDB",
             "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-            "proficiency": 70
+            "proficiency": 90,
+            "category": "Database"
         },
         {
             "name": "Git",
             "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-            "proficiency": 80
+            "proficiency": 95,
+            "category": "Tools"
         },
         {
-            "name": "Docker",
-            "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-            "proficiency": 65
-        }
-    ],
-    "internships": [
-        {
-            "domain": "Web Development",
-            "company": "Tech Solutions Ltd",
-            "startDate": "May 2019",
-            "endDate": "Aug 2019",
-            "projectDescription": "Developed responsive web applications using React and integrated REST APIs. Contributed to the company's main product dashboard."
-        },
-        {
-            "domain": "Backend Development",
-            "company": "Software Corp",
-            "startDate": "Jan 2019",
-            "endDate": "Apr 2019",
-            "projectDescription": "Built RESTful APIs using Node.js and Express. Implemented database schemas and optimized query performance."
+            "name": "GitHub",
+            "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+            "proficiency": 95,
+            "category": "Tools"
         }
     ],
     "certifications": [
         {
-            "title": "AWS Certified Solutions Architect",
-            "certificateUrl": "https://example.com/certificate1"
-        },
-        {
-            "title": "React Developer Certification",
-            "certificateUrl": "https://example.com/certificate2"
-        },
-        {
-            "title": "Full Stack Web Development",
-            "certificateUrl": "https://example.com/certificate3"
+            "title": "Internship Certificate - Maxelerator Foundation",
+            "description": "Completed internship in Automatic Intelligence System Using Computer Vision. Developed practical skills in AI/ML and computer vision technologies during 10-day intensive program at Maxelerator Foundation, Madurai.",
+            "certificateUrl": "/certifications/maxelerator.png",
+            "imageUrl": "/certifications/maxelerator.png"
         }
     ],
     "achievements": [
         {
-            "title": "Hackathon Winner 2023",
-            "description": "Won first place in a national level hackathon with an innovative healthcare solution."
+            "title": "Internship Certificate - MentorBridge",
+            "description": "Successfully completed internship program focused on product development using modern tools and technologies, offering hands-on exposure to Agile methodology and professional software development.",
+            "certificateUrl": "/certifications/appreciation.png",
+            "imageUrl": "/certifications/appreciation.png"
         },
         {
-            "title": "Open Source Contributor",
-            "description": "Active contributor to popular open-source projects with 500+ stars on GitHub."
-        },
-        {
-            "title": "Best Project Award",
-            "description": "Received the best final year project award for developing an AI-powered learning platform."
-        },
-        {
-            "title": "Technical Blog",
-            "description": "Maintain a technical blog with 10,000+ monthly readers sharing knowledge about web development."
+            "title": "Junior Grade Typewriting Certificate",
+            "description": "Achieved First Class with Distinction in Junior Grade Typewriting English (30 Words per Minute) examination conducted by Government of Tamil Nadu, Department of Technical Education.",
+            "certificateUrl": "/certifications/type-writing-certificate.pdf",
+            "imageUrl": "/certifications/type-writing-certificate.pdf"
         }
     ]
 }

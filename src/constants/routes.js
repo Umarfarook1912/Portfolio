@@ -5,7 +5,6 @@ export const ROUTES = {
     PROJECTS: '#projects',
     EDUCATION: '#education',
     SKILLS: '#skills',
-    INTERNSHIP: '#internship',
     CERTIFICATIONS: '#certifications',
     ACHIEVEMENTS: '#achievements',
     CONTACT: '#contact',

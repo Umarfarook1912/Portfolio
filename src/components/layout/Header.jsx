@@ -54,7 +54,9 @@ const Header = () => {
                     {/* Download CV Button */}
                     <div className="hidden md:block">
                         <a
-                            href="#contact"
+                            href="/resume/Umar%20Farook%20J_Resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-flex items-center px-6 py-2.5 bg-[#169b46] hover:bg-[#50ca71] text-white rounded-full font-medium transition-all duration-300 text-sm shadow-lg shadow-green-200"
                         >
                             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -94,7 +96,9 @@ const Header = () => {
                             </a>
                         ))}
                         <a
-                            href="#contact"
+                            href="/resume/Umar%20Farook%20J_Resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="block mt-4 px-6 py-2.5 bg-[#169b46] hover:bg-[#50ca71] text-white rounded-full font-medium transition-all duration-300 text-sm text-center"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
