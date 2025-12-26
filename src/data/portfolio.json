@@ -7,54 +7,78 @@
     },
     "workExperience": [
         {
-            "title": "Senior Full Stack Developer",
-            "company": "Tech Company",
-            "startDate": "Jan 2022",
+            "title": "Software Engineer",
+            "company": "Sukiran Solutions Private Limited",
+            "startDate": "Nov 2025",
             "endDate": "Present",
-            "description": "Leading development of enterprise web applications using React, Node.js, and cloud technologies. Mentoring junior developers and implementing best practices.",
-            "githubUrl": "https://github.com/yourusername/project",
-            "projectUrl": "https://example.com"
+            "description": "Working as a Software Engineer, contributing to the design and development of scalable web applications. Involved in building and maintaining frontend components using React.js and backend services using modern JavaScript frameworks. Collaborated with cross-functional teams to implement new features, optimize performance, and ensure clean, maintainable code following best practices.",
+            "projectUrl": ""
         },
         {
-            "title": "Full Stack Developer",
-            "company": "Startup Inc",
-            "startDate": "Jun 2020",
-            "endDate": "Dec 2021",
-            "description": "Developed and maintained multiple client projects using modern web technologies. Collaborated with cross-functional teams to deliver high-quality products.",
-            "githubUrl": "https://github.com/yourusername/project2",
-            "projectUrl": "https://example2.com"
+            "title": "Co-founder & Product Analyst (StubLab)",
+            "company": "StubLab (Mock Server)",
+            "startDate": "Nov 2024",
+            "endDate": "May 2025",
+            "description": "Co-founder and product analyst for StubLab — a mock server that allows users to create and test APIs without a backend. Implemented JWT-based authentication and additional security using MFA.",
+            "projectUrl": "https://stublab.in",
+            "logoUrl": "/company/stublab.png"
+        },
+        {
+            "title": "Full Stack Developer (Vinculo)",
+            "company": "Vinculo - Ecommerce Website",
+            "startDate": "Apr 2024",
+            "endDate": "Aug 2024",
+            "description": "Contributed to developing an ecommerce website for SSM Garment using MERN (MongoDB, Express, React, Node) technology.",
+            "projectUrl": "https://vinculo-mgdn.vercel.app/",
+            "logoUrl": "/company/vinculo.png"
         }
     ],
     "projects": [
         {
-            "title": "E-Commerce Platform",
-            "description": "A full-featured e-commerce platform with payment integration, inventory management, and admin dashboard.",
-            "githubUrl": "https://github.com/yourusername/ecommerce",
-            "projectUrl": "https://ecommerce-demo.com"
+            "title": "Document Scanner",
+            "description": "Convert images to PDF using OpenCV and tkinter. Images are filtered and cropped using corner detection and perspective transformation — designed to run in Jupyter/VSCode environments.",
+            "githubUrl": "https://github.com/Umarfarook1912/Document-Scanner",
+            "imageUrl": "/project/document-scanner.png"
         },
         {
-            "title": "Task Management App",
-            "description": "A collaborative task management application with real-time updates and team features.",
-            "githubUrl": "https://github.com/yourusername/taskapp",
-            "projectUrl": "https://taskapp-demo.com"
+            "title": "Ecommerce Website for GiftieBags",
+            "description": "Developed a dynamic ecommerce website using HTML, CSS, JavaScript, and Bootstrap. Implemented a user-friendly interface for browsing and purchasing products.",
+            "githubUrl": "https://github.com/Umarfarook1912/giftiebags",
+            "projectUrl": "https://giftiebags.vercel.app/",
+            "imageUrl": "/project/giftiebags.png"
         },
         {
-            "title": "Portfolio Generator",
-            "description": "A tool to generate beautiful portfolio websites with customizable themes and components.",
-            "githubUrl": "https://github.com/yourusername/portfolio-gen",
-            "projectUrl": "https://portfolio-gen.com"
+            "title": "College Website",
+            "description": "Built the college website for SSM Institute of Engineering and Technology using HTML, CSS and Bootstrap — the first project during the start of web development learning.",
+            "projectUrl": "https://ssmiet.ac.in/",
+            "imageUrl": "/project/college-website.png"
+        },
+        {
+            "title": "Personal Travel Blog",
+            "description": "A travel blog showcasing travel tips, photos, featured destinations and posts. Built with responsive layout and simple CMS-ready structure.",
+            "githubUrl": "https://github.com/Umarfarook1912/Personal-Blog-on-IBM-Cloud-Static-Web-Apps",
+            "projectUrl": "https://umarfarook1912.github.io/Personal-Blog-on-IBM-Cloud-Static-Web-Apps/",
+            "imageUrl": "/project/travel-blog.png"
         }
     ],
     "education": [
         {
-            "college": "University Name",
-            "degree": "Bachelor of Technology in Computer Science",
-            "year": "2016 - 2020"
+            "college": "SSM Institute of Engineering and Technology, Dindigul",
+            "degree": "B.E. Computer Science and Engineering",
+            "year": "2021 - 2025",
+            "percentage": "88%"
         },
         {
-            "college": "High School Name",
-            "degree": "Higher Secondary Education",
-            "year": "2014 - 2016"
+            "college": "St. Mary's Higher Secondary School, Dindigul",
+            "degree": "HSC",
+            "year": "2021",
+            "percentage": "94%"
+        },
+        {
+            "college": "St. Mary's Higher Secondary School, Dindigul",
+            "degree": "SSLC",
+            "year": "2019",
+            "percentage": "92%"
         }
     ],
     "technicalSkills": [

@@ -1,64 +1,84 @@
 import PropTypes from 'prop-types';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { Section, Container, SectionTitle, Card, Button } from '../ui';
+import { FaBriefcase, FaCalendarAlt, FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { Section, Container, SectionTitle } from '../ui';
 
 const WorkExperience = ({ data }) => {
     return (
-        <Section id="experience" background="gray">
+        <Section id="experience" background="white">
             <Container>
                 <SectionTitle
                     title="Work Experience"
-                    subtitle="My professional journey and contributions"
+                    subtitle="Professional experience and expertise"
                 />
 
-                <div className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     {data.map((experience, index) => (
-                        <Card key={index} hover className="">
-                            <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                                <div>
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-1">
-                                        {experience.title}
-                                    </h3>
-                                    <p className="text-lg text-[#169b46] font-medium">
-                                        {experience.company}
-                                    </p>
+                        <div key={index} className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+                            {/* Icon / Company logo if provided (no green background).
+                                Hide the whole area when there's no projectUrl and no logoUrl. */}
+                            {(experience.projectUrl || experience.logoUrl) && (
+                                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 overflow-hidden">
+                                    {experience.logoUrl ? (
+                                        <img
+                                            src={experience.logoUrl}
+                                            alt={experience.company}
+                                            className="w-12 h-12 object-contain"
+                                        />
+                                    ) : (
+                                        <FaBriefcase className="w-8 h-8 text-gray-400" />
+                                    )}
                                 </div>
-                                <p className="text-gray-600 mt-2 md:mt-0">
-                                    {experience.startDate} - {experience.endDate}
-                                </p>
+                            )}
+
+                            {/* Title */}
+                            <h3 className="text-xl font-bold text-gray-900 mb-2">
+                                {experience.title}
+                            </h3>
+
+                            {/* Company */}
+                            <p className="text-[#169b46] font-semibold mb-3">
+                                {experience.company}
+                            </p>
+
+                            {/* Date */}
+                            <div className="flex items-center text-gray-500 text-sm mb-4">
+                                <FaCalendarAlt className="w-4 h-4 mr-2" />
+                                <span>{experience.startDate} - {experience.endDate}</span>
                             </div>
 
-                            <p className="text-gray-700 mb-4 leading-relaxed">
+                            {/* Description */}
+                            <p className="text-gray-600 leading-relaxed mb-6 text-sm">
                                 {experience.description}
                             </p>
 
-                            <div className="flex flex-wrap gap-3">
-                                {experience.githubUrl && (
-                                    <Button
-                                        href={experience.githubUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        variant="outline"
-                                        size="sm"
-                                    >
-                                        <FaGithub className="mr-2" />
-                                        GitHub
-                                    </Button>
-                                )}
-                                {experience.projectUrl && (
-                                    <Button
-                                        href={experience.projectUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        variant="ghost"
-                                        size="sm"
-                                    >
-                                        <FaExternalLinkAlt className="mr-2" />
-                                        View Project
-                                    </Button>
-                                )}
-                            </div>
-                        </Card>
+                            {/* Links */}
+                            {(experience.githubUrl || experience.projectUrl) && (
+                                <div className="flex gap-3 pt-4 border-t border-gray-100">
+                                    {experience.githubUrl && (
+                                        <a
+                                            href={experience.githubUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-2 text-gray-600 hover:text-[#169b46] transition-colors text-sm font-medium"
+                                        >
+                                            <FaGithub className="w-4 h-4" />
+                                            View Code
+                                        </a>
+                                    )}
+                                    {experience.projectUrl && (
+                                        <a
+                                            href={experience.projectUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-2 text-gray-600 hover:text-[#169b46] transition-colors text-sm font-medium"
+                                        >
+                                            <FaExternalLinkAlt className="w-4 h-4" />
+                                            Visit Site
+                                        </a>
+                                    )}
+                                </div>
+                            )}
+                        </div>
                     ))}
                 </div>
             </Container>
@@ -74,6 +94,7 @@ WorkExperience.propTypes = {
             startDate: PropTypes.string.isRequired,
             endDate: PropTypes.string.isRequired,
             description: PropTypes.string.isRequired,
+            logoUrl: PropTypes.string,
             githubUrl: PropTypes.string,
             projectUrl: PropTypes.string,
         })

@@ -1,54 +1,66 @@
 import PropTypes from 'prop-types';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { Section, Container, SectionTitle, Card, Button } from '../ui';
+import { Section, Container, SectionTitle } from '../ui';
 
 const Projects = ({ data }) => {
     return (
-        <Section id="projects" background="white">
+        <Section id="projects" background="gray">
             <Container>
                 <SectionTitle
                     title="Projects"
                     subtitle="Some of my recent work and personal projects"
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {data.map((project, index) => (
-                        <Card key={index} hover className="flex flex-col">
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">
-                                {project.title}
-                            </h3>
+                        <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                            {/* Project Image header: use provided image when available, otherwise fallback to a neutral header */}
+                            {project.imageUrl ? (
+                                <div className="relative h-64 overflow-hidden">
+                                    <img
+                                        src={project.imageUrl}
+                                        alt={project.title}
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                            ) : (
+                                <div className="relative h-64 bg-gray-100" />
+                            )}
 
-                            <p className="text-gray-700 mb-4 flex-grow leading-relaxed">
-                                {project.description}
-                            </p>
+                            {/* Project Details */}
+                            <div className="p-6">
+                                <h3 className="text-lg font-bold text-gray-900 mb-3">{project.title}</h3>
+                                <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                                    {project.description}
+                                </p>
 
-                            <div className="flex flex-wrap gap-3 mt-auto">
-                                {project.githubUrl && (
-                                    <Button
-                                        href={project.githubUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        variant="outline"
-                                        size="sm"
-                                    >
-                                        <FaGithub className="mr-2" />
-                                        Code
-                                    </Button>
-                                )}
-                                {project.projectUrl && (
-                                    <Button
-                                        href={project.projectUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        variant="ghost"
-                                        size="sm"
-                                    >
-                                        <FaExternalLinkAlt className="mr-2" />
-                                        Live Demo
-                                    </Button>
-                                )}
+                                {/* Action Buttons */}
+                                <div className="flex items-center gap-3">
+                                    {project.githubUrl && (
+                                        <a
+                                            href={project.githubUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-gray-100 hover:bg-[#169b46] text-gray-700 hover:text-white rounded-lg transition-all duration-300 text-sm font-medium"
+                                        >
+                                            <FaGithub className="w-4 h-4" />
+                                            Code
+                                        </a>
+                                    )}
+                                    {project.projectUrl && (
+                                        <a
+                                            href={project.projectUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-[#169b46] hover:bg-[#50ca71] text-white rounded-lg transition-all duration-300 text-sm font-medium"
+                                        >
+                                            <FaExternalLinkAlt className="w-4 h-4" />
+                                            Live
+                                        </a>
+                                    )}
+                                </div>
                             </div>
-                        </Card>
+                        </div>
                     ))}
                 </div>
             </Container>
