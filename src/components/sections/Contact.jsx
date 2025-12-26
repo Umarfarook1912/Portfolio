@@ -137,7 +137,7 @@ const Contact = () => {
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#169b46] to-[#50ca71] hover:from-[#50ca71] hover:to-[#169b46] text-white rounded-xl font-semibold transition-all duration-300 shadow-lg shadow-green-200 hover:shadow-xl hover:shadow-green-300 disabled:opacity-50 disabled:cursor-not-allowed transform hover:-translate-y-0.5"
+                                className="inline-flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-[#169b46] to-[#50ca71] hover:from-[#50ca71] hover:to-[#169b46] text-white rounded-xl font-semibold transition-all duration-300 shadow-lg shadow-green-100 hover:shadow-xl hover:shadow-green-200 disabled:opacity-50 disabled:cursor-not-allowed transform hover:-translate-y-0.5 mx-auto"
                             >
                                 {isSubmitting ? (
                                     <>
