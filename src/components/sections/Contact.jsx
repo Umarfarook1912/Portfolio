@@ -44,7 +44,7 @@ const Contact = () => {
                                     id="name"
                                     type="text"
                                     placeholder="Your full name"
-                                    className={`w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#50ca71] transition-all ${errors.name ? 'border-red-500 bg-red-50' : 'border-gray-200 hover:border-[#50ca71]'
+                                    className={`w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#50ca71] transition-all ${errors.name ? 'border-red-500 ' : 'border-gray-200 hover:border-[#50ca71]'
                                         }`}
                                     {...register('name', {
                                         required: 'Name is required',
@@ -53,7 +53,7 @@ const Contact = () => {
                                 />
                                 {errors.name && (
                                     <p className="text-red-500 text-sm mt-1.5 flex items-center gap-1">
-                                        <span>⚠️</span> {errors.name.message}
+                                         {errors.name.message}
                                     </p>
                                 )}
                             </div>
@@ -68,7 +68,7 @@ const Contact = () => {
                                     id="email"
                                     type="email"
                                     placeholder="your.email@example.com"
-                                    className={`w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#50ca71] transition-all ${errors.email ? 'border-red-500 bg-red-50' : 'border-gray-200 hover:border-[#50ca71]'
+                                    className={`w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#50ca71] transition-all ${errors.email ? 'border-red-500 ' : 'border-gray-200 hover:border-[#50ca71]'
                                         }`}
                                     {...register('email', {
                                         required: 'Email is required',
@@ -80,7 +80,7 @@ const Contact = () => {
                                 />
                                 {errors.email && (
                                     <p className="text-red-500 text-sm mt-1.5 flex items-center gap-1">
-                                        <span>⚠️</span> {errors.email.message}
+                                         {errors.email.message}
                                     </p>
                                 )}
                             </div>
@@ -95,7 +95,7 @@ const Contact = () => {
                                     id="subject"
                                     type="text"
                                     placeholder="What's this about?"
-                                    className={`w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#50ca71] transition-all ${errors.subject ? 'border-red-500 bg-red-50' : 'border-gray-200 hover:border-[#50ca71]'
+                                    className={`w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#50ca71] transition-all ${errors.subject ? 'border-red-500 ' : 'border-gray-200 hover:border-[#50ca71]'
                                         }`}
                                     {...register('subject', {
                                         required: 'Subject is required',
@@ -104,7 +104,7 @@ const Contact = () => {
                                 />
                                 {errors.subject && (
                                     <p className="text-red-500 text-sm mt-1.5 flex items-center gap-1">
-                                        <span>⚠️</span> {errors.subject.message}
+                                         {errors.subject.message}
                                     </p>
                                 )}
                             </div>
@@ -119,7 +119,7 @@ const Contact = () => {
                                     id="message"
                                     rows="5"
                                     placeholder="Tell me about your project or inquiry..."
-                                    className={`w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#50ca71] resize-none transition-all ${errors.message ? 'border-red-500 bg-red-50' : 'border-gray-200 hover:border-[#50ca71]'
+                                    className={`w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-[#50ca71] resize-none transition-all ${errors.message ? 'border-red-500 ' : 'border-gray-200 hover:border-[#50ca71]'
                                         }`}
                                     {...register('message', {
                                         required: 'Message is required',
@@ -128,7 +128,7 @@ const Contact = () => {
                                 ></textarea>
                                 {errors.message && (
                                     <p className="text-red-500 text-sm mt-1.5 flex items-center gap-1">
-                                        <span>⚠️</span> {errors.message.message}
+                                         {errors.message.message}
                                     </p>
                                 )}
                             </div>

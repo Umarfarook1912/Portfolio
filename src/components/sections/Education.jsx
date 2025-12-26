@@ -12,47 +12,52 @@ const Education = ({ data }) => {
                 />
 
                 <div className="max-w-4xl mx-auto mt-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {data.map((education, index) => (
-                            <article
-                                key={index}
-                                className="group bg-white rounded-2xl p-5 shadow-sm hover:shadow-lg transition-shadow duration-300"
-                                aria-labelledby={`edu-${index}-title`}
-                            >
-                                <div className="flex items-start gap-4">
-                                    {/* optional logo or icon */}
-                                    {education.logoUrl ? (
-                                        <img
-                                            src={education.logoUrl}
-                                            alt={`${education.college} logo`}
-                                            className="w-12 h-12 rounded-md object-contain flex-shrink-0"
-                                        />
-                                    ) : (
-                                        <div className="w-12 h-12 bg-[#f1fdf4] text-[#169b46] rounded-md flex items-center justify-center flex-shrink-0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422A12.083 12.083 0 0118 20.5a12.08 12.08 0 01-6 1.5c-2.21 0-4.28-.56-6-1.5A12.083 12.083 0 016 10.578L12 14z" />
-                                            </svg>
-                                        </div>
-                                    )}
+                    <div className="relative ml-8 md:ml-12">
+                        {/* vertical line for timeline (visible on md+) */}
+                        <div className="hidden md:block absolute left-2 top-6 bottom-6 w-0.5 bg-gray-200"></div>
 
-                                    <div className="flex-1">
-                                        <div className="flex items-center justify-between">
-                                            <div className="flex items-center gap-3">
-                                                <span className="inline-block bg-[#eaf7ef] text-[#169b46] px-3 py-0.5 rounded-md text-sm font-semibold">{education.year}</span>
-                                                <h3 id={`edu-${index}-title`} className="text-md md:text-lg font-semibold text-gray-900">{education.degree}</h3>
+                        <div className="space-y-8">
+                            {data.map((education, index) => (
+                                <article
+                                    key={index}
+                                    className="relative bg-white rounded-2xl p-5 shadow-sm hover:shadow-lg transition-shadow duration-300 pl-12 md:pl-16"
+                                    aria-labelledby={`edu-${index}-title`}
+                                >
+                                    {/* marker */}
+                                    <div className="absolute left-0 top-6 md:left-2 md:top-6 w-3 h-3 md:w-4 md:h-4 bg-[#169b46] rounded-full border-4 border-white shadow" />
+
+                                    <div className="flex items-start gap-4">
+                                        {/* optional logo or icon */}
+                                        {education.logoUrl ? (
+                                            <img
+                                                src={education.logoUrl}
+                                                alt={`${education.college} logo`}
+                                                className="w-10 h-10 rounded-md object-contain flex-shrink-0"
+                                            />
+                                        ) : (
+                                            <div className="w-10 h-10 bg-[#f1fdf4] text-[#169b46] rounded-md flex items-center justify-center flex-shrink-0">
+                                                <FaGraduationCap className="w-5 h-5" />
+                                            </div>
+                                        )}
+
+                                        <div className="flex-1">
+                                            <div className="flex items-center justify-between">
+                                                <div className="flex items-center gap-3">
+                                                    <span className="inline-block bg-[#eaf7ef] text-[#169b46] px-3 py-0.5 rounded-md text-sm font-semibold">{education.year}</span>
+                                                    <h3 id={`edu-${index}-title`} className="text-md md:text-lg font-semibold text-gray-900">{education.degree}</h3>
+                                                </div>
+
+                                                {education.percentage && (
+                                                    <div className="text-sm font-semibold text-[#169b46]">{education.percentage}</div>
+                                                )}
                                             </div>
 
-                                            {education.percentage && (
-                                                <div className="text-sm font-semibold text-[#169b46]">{education.percentage}</div>
-                                            )}
+                                            <p className="text-gray-600 mt-2">{education.college}</p>
                                         </div>
-
-                                        <p className="text-gray-600 mt-2">{education.college}</p>
                                     </div>
-                                </div>
-                            </article>
-                        ))}
+                                </article>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </Container>

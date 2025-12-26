@@ -6,7 +6,7 @@ const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const navItems = [
-        { label: 'About Me', href: '#home' },
+        { label: 'About', href: '#home' },
         { label: 'Services', href: '#experience' },
         { label: 'Resume', href: '#education' },
         { label: 'Projects', href: '#projects' },
@@ -28,14 +28,14 @@ const Header = () => {
                 }`}
         >
             <Container>
-                <nav className="flex items-center justify-between">
+                <nav className="flex items-center justify-between ">
                     {/* Logo */}
                     <a
                         href="#home"
-                        className="text-xl font-bold text-gray-800"
+                        className="text-2xl font-bold text-gray-800"
                     >
-                        <span className="text-gray-800">About</span>{' '}
-                        <span className="text-[#169b46]">Me</span>
+                        <span className="text-gray-800 text-md">Umar Farook</span>{' '}
+                        <span className="text-[#169b46] text-md">J</span>
                     </a>
 
                     {/* Desktop Navigation */}
@@ -44,7 +44,7 @@ const Header = () => {
                             <a
                                 key={item.label}
                                 href={item.href}
-                                className="text-gray-600 hover:text-[#169b46] transition-colors text-sm font-medium"
+                                className="text-gray-600 hover:text-[#169b46] transition-colors text-lg font-medium"
                             >
                                 {item.label}
                             </a>
@@ -57,7 +57,7 @@ const Header = () => {
                             href="/resume/Umar%20Farook%20J_Resume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center px-6 py-2.5 bg-[#169b46] hover:bg-[#50ca71] text-white rounded-full font-medium transition-all duration-300 text-sm shadow-lg shadow-green-200"
+                            className="inline-flex items-center px-6 py-2.5 bg-[#169b46] hover:bg-[#50ca71] text-white rounded-full font-medium transition-all duration-300 text-md shadow-lg shadow-green-200"
                         >
                             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
