@@ -1,29 +1,22 @@
 import express from 'express';
 import fs from 'fs';
 import path from 'path';
-// Load local env for dev
-import dotenv from 'dotenv';
-dotenv.config({ path: path.resolve(process.cwd(), '.env.local') });
+
+// Centralized env loader for local/dev
+import './scripts/load-env.js';
 
 import handler from './api/contact.js';
+import createDevCors from './server-utils/cors.js';
 
 const app = express();
 const basePort = Number(process.env.PORT_API) || 3001;
 
 app.use(express.json());
 
-// Simple CORS middleware for local dev: allow Vite dev origin and any origin if needed
-app.use((req, res, next) => {
-  const originHeader = req.headers.origin;
-  const isLocalOrigin = typeof originHeader === 'string' && /^https?:\/\/localhost(?::\d+)?$/.test(originHeader);
-  // If request comes from a localhost origin, echo it back; otherwise allow any origin for local dev.
-  res.setHeader('Access-Control-Allow-Origin', isLocalOrigin ? originHeader : '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  res.setHeader('Access-Control-Allow-Credentials', 'true');
-  if (req.method === 'OPTIONS') return res.sendStatus(204);
-  next();
-});
+// Apply development-only CORS when not in production
+if (process.env.NODE_ENV !== 'production') {
+  app.use(createDevCors());
+}
 
 // Proxy the same handler used for Vercel serverless
 app.all('/api/contact', async (req, res) => {

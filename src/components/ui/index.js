@@ -3,3 +3,4 @@ export { default as Card } from './Card';
 export { default as SectionTitle } from './SectionTitle';
 export { default as Container } from './Container';
 export { default as Section } from './Section';
+export { default as SectionCard } from './SectionCard';

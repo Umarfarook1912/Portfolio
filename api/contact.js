@@ -1,23 +1,15 @@
 import nodemailer from 'nodemailer';
-// Load local env when running the handler directly in dev (no-op in production)
-try {
-    // eslint-disable-next-line no-unused-vars
-    import('dotenv').then((d) => d.config({ path: './.env.local' }));
-} catch (e) {
-    // ignore
-}
+import createDevCors from '../server-utils/cors.js';
 
 export default async function handler(req, res) {
-    // Basic CORS handling for direct browser requests (OPTIONS preflight)
-    const originHeader = req.headers.origin;
-    const isLocalOrigin = typeof originHeader === 'string' && /^https?:\/\/localhost(?::\d+)?$/.test(originHeader);
-    res.setHeader('Access-Control-Allow-Origin', isLocalOrigin ? originHeader : '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-    res.setHeader('Access-Control-Allow-Credentials', 'true');
-
-    if (req.method === 'OPTIONS') {
-        return res.status(204).end();
+    // Apply development-only CORS (server.js will apply it when proxying).
+    if (process.env.NODE_ENV !== 'production') {
+        const cors = createDevCors();
+        let nextCalled = false;
+        cors(req, res, () => {
+            nextCalled = true;
+        });
+        if (!nextCalled && res.writableEnded) return; // middleware handled OPTIONS
     }
 
     if (req.method !== 'POST') {

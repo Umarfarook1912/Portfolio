@@ -2,6 +2,8 @@ import { useForm } from 'react-hook-form';
 import { FaPaperPlane, FaUser, FaEnvelope, FaEdit, FaCommentDots } from 'react-icons/fa';
 import { Section, Container, SectionTitle } from '../ui';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
+import { getApiBase } from '../../utils/api';
+import { successAlert, errorAlert } from '../../utils/alert';
 
 const Contact = () => {
     const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 });
@@ -14,7 +16,7 @@ const Contact = () => {
 
     const onSubmit = async (data) => {
         try {
-            const base = import.meta.env.VITE_API_URL || '';
+            const base = getApiBase();
             const resp = await fetch(`${base}/api/contact`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -28,10 +30,10 @@ const Contact = () => {
 
             // success
             reset();
-            alert('Message sent — thank you! I will get back to you soon.');
+            await successAlert('Message sent', 'Thank you — I will get back to you soon.');
         } catch (error) {
             console.error('Error sending contact message:', error);
-            alert('Failed to send message. Please try again or contact me directly.');
+            await errorAlert('Failed to send', 'Please try again or contact me directly.');
         }
     };
 
