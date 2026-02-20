@@ -14,25 +14,24 @@ const Contact = () => {
 
     const onSubmit = async (data) => {
         try {
-            // Format the message for WhatsApp
-            const message = `*New Contact Form Message*%0A%0A` +
-                `*Name:* ${encodeURIComponent(data.name)}%0A` +
-                `*Email:* ${encodeURIComponent(data.email)}%0A` +
-                `*Subject:* ${encodeURIComponent(data.subject)}%0A%0A` +
-                `*Message:*%0A${encodeURIComponent(data.message)}`;
+            const base = import.meta.env.VITE_API_URL || '';
+            const resp = await fetch(`${base}/api/contact`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+            });
 
-            // WhatsApp phone number (from social.js)
-            const phoneNumber = '7871694931';
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+            if (!resp.ok) {
+                const err = await resp.json().catch(() => ({}));
+                throw new Error(err?.error || 'Failed to send message');
+            }
 
-            // Open WhatsApp in a new tab
-            window.open(whatsappUrl, '_blank');
-
-            // Reset the form after opening WhatsApp
+            // success
             reset();
+            alert('Message sent — thank you! I will get back to you soon.');
         } catch (error) {
-            console.error('Error opening WhatsApp:', error);
-            alert('Failed to open WhatsApp. Please try again.');
+            console.error('Error sending contact message:', error);
+            alert('Failed to send message. Please try again or contact me directly.');
         }
     };
 
