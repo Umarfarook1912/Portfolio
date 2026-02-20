@@ -4,6 +4,7 @@ import {
   Hero,
   WorkExperience,
   Projects,
+  FreelanceProjects,
   Education,
   Certifications,
   Achievements,
@@ -31,6 +32,7 @@ function App() {
           <Hero data={portfolioData.hero} />
           <WorkExperience data={portfolioData.workExperience} />
           <Projects data={portfolioData.projects} />
+          <FreelanceProjects data={portfolioData.freelanceProjects} />
           <Education data={portfolioData.education} />
           <TechnicalSkills data={portfolioData.technicalSkills} />
           <Certifications data={portfolioData.certifications} />

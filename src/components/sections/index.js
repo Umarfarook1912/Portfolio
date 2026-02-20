@@ -1,6 +1,7 @@
 export { default as Hero } from './Hero';
 export { default as WorkExperience } from './WorkExperience';
 export { default as Projects } from './Projects';
+export { default as FreelanceProjects } from './FreelanceProjects';
 export { default as Education } from './Education';
 export { default as TechnicalSkills } from './TechnicalSkills';
 export { default as Certifications } from './Certifications';

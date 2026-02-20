@@ -41,13 +41,6 @@
             "imageUrl": "/project/document-scanner.png"
         },
         {
-            "title": "Ecommerce Website for GiftieBags",
-            "description": "Developed a dynamic ecommerce website using HTML, CSS, JavaScript, and Bootstrap. Implemented a user-friendly interface for browsing and purchasing products.",
-            "githubUrl": "https://github.com/Umarfarook1912/giftiebags",
-            "projectUrl": "https://giftiebags.vercel.app/",
-            "imageUrl": "/project/giftiebags.png"
-        },
-        {
             "title": "College Website",
             "description": "Built the college website for SSM Institute of Engineering and Technology using HTML, CSS and Bootstrap — the first project during the start of web development learning.",
             "projectUrl": "https://ssmiet.ac.in/",
@@ -59,6 +52,21 @@
             "githubUrl": "https://github.com/Umarfarook1912/Personal-Blog-on-IBM-Cloud-Static-Web-Apps",
             "projectUrl": "https://umarfarook1912.github.io/Personal-Blog-on-IBM-Cloud-Static-Web-Apps/",
             "imageUrl": "/project/travel-blog.png"
+        }
+    ],
+    "freelanceProjects": [
+        {
+            "title": "SoftZCart",
+            "description": "Software / ecommerce website developed using the MERN stack and hosted on a VPS (Hostinger). Features include product management, user authentication, and checkout flow.",
+            "projectUrl": "https://softzcart.com/",
+            "imageUrl": "/freelance/softzcart.png"
+        },
+        {
+            "title": "Ecommerce Website for GiftieBags",
+            "description": "Developed a dynamic ecommerce website using HTML, CSS, JavaScript, and Bootstrap. Implemented a user-friendly interface for browsing and purchasing products.",
+            "githubUrl": "https://github.com/Umarfarook1912/giftiebags",
+            "projectUrl": "https://giftiebags.vercel.app/",
+            "imageUrl": "/freelance/giftiebags.png"
         }
     ],
     "education": [
