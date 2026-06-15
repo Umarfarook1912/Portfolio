@@ -7,12 +7,22 @@
     },
     "workExperience": [
         {
+            "title": "Software Development Engineer (SDE1)",
+            "company": "Teksage",
+            "startDate": "Jun 2026",
+            "endDate": "Present",
+            "description": "Working on Flutter, Next.js, Python, and React projects. Developed the complete Teksage website and contributed new features to the mobile app and admin dashboard, focusing on responsive interfaces, clean implementation, and practical business workflows. Integrated Whatsapp API and Single Query feature for seamless communication and unified user experience.",
+            "projectUrl": "",
+            "logoUrl": "/company/teksage.png"
+        },
+        {
             "title": "Software Engineer",
             "company": "Sukiran Solutions Private Limited",
             "startDate": "Nov 2025",
-            "endDate": "Present",
+            "endDate": "May 2025",
             "description": "Working as a Software Engineer, contributing to the design and development of scalable web applications. Involved in building and maintaining frontend components using React.js and backend services using modern JavaScript frameworks. Collaborated with cross-functional teams to implement new features, optimize performance, and ensure clean, maintainable code following best practices.",
-            "projectUrl": ""
+            "projectUrl": "",
+            "logoUrl": "/company/sukiran.png"
         },
         {
             "title": "Co-founder & Product Analyst (StubLab)",
@@ -119,6 +129,16 @@
             "category": "Frontend"
         },
         {
+            "name": "Next.js",
+            "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+            "category": "Frontend"
+        },
+        {
+            "name": "Flutter",
+            "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+            "category": "Mobile"
+        },
+        {
             "name": "HTML",
             "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
             "category": "Frontend"
@@ -151,6 +171,11 @@
         {
             "name": "TypeScript",
             "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+            "category": "Language"
+        },
+        {
+            "name": "Python",
+            "logoUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
             "category": "Language"
         },
         {
