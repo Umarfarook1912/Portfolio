@@ -66,6 +66,18 @@
     ],
     "freelanceProjects": [
         {
+            "title": "Mariah Coirs",
+            "description": "India's premier manufacturer and exporter of premium coco peat blocks, coir fiber, grow bags, and coir products. Supplying 50+ countries since 2009.",
+            "projectUrl": "https://mariahcoirsexport.com",
+            "imageUrl": "/freelance/mariah.png"
+        },
+        {
+            "title": "Gifwoods",
+            "description": "Premium personalized gifts crafted to celebrate every special moment — engraved, hand-packed, and delivered with intention.",
+            "projectUrl": "https://gifwoods.com",
+            "imageUrl": "/freelance/gifwoods.png"
+        },
+        {
             "title": "SoftZCart",
             "description": "Software / ecommerce website developed using the MERN stack and hosted on a VPS (Hostinger). Features include product management, user authentication, and checkout flow.",
             "projectUrl": "https://softzcart.com/",
