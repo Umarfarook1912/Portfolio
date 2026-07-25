@@ -45,6 +45,13 @@
     ],
     "projects": [
         {
+            "title": "GenUI Style Extractor",
+            "description": "Figma plugin and design-to-code tool that extracts styles from Figma layers, webpages, and images, then converts them into production-ready CSS, Tailwind, or JSX — with px→rem conversion and copy/download handoff.",
+            "projectUrl": "https://www.figma.com/community/plugin/1587716742282225774/genui-style-extractor",
+            "githubUrl": "https://github.com/Umarfarook1912/genui-style-extractor",
+            "imageUrl": "/project/genui.png"
+        },
+        {
             "title": "Document Scanner",
             "description": "Convert images to PDF using OpenCV and tkinter. Images are filtered and cropped using corner detection and perspective transformation — designed to run in Jupyter/VSCode environments.",
             "githubUrl": "https://github.com/Umarfarook1912/Document-Scanner",
