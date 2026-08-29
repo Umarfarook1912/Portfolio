@@ -52,17 +52,20 @@ const WorkExperience = ({ data }) => {
                         return (
                             <div ref={ref} key={index}>
                                 <SectionCard title={experience.title} visible={isVisible} delay={index * 150}>
-                                    <div className="flex items-start gap-4">
-                                        <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-0 overflow-hidden shadow-lg shadow-green-100">
+                                    <div className="flex items-start gap-4 mb-4">
+                                        <div className="w-16 h-16 rounded-2xl bg-white border border-gray-100 flex items-center justify-center mb-0 overflow-hidden shadow-md shadow-gray-100 flex-shrink-0 p-2.5">
                                             {experience.logoUrl ? (
-                                                <img src={experience.logoUrl} alt={experience.company} className="w-10 h-10 object-contain" />
+                                                <img src={experience.logoUrl} alt={experience.company} className="w-full h-full object-contain" />
                                             ) : (
-                                                <FaBriefcase className="w-7 h-7 text-white" />
+                                                <div className="w-full h-full bg-gradient-to-br from-[#169b46] to-[#50ca71] rounded-xl flex items-center justify-center">
+                                                    <FaBriefcase className="w-6 h-6 text-white" />
+                                                </div>
                                             )}
                                         </div>
-                                        <div className="flex-1">
+                                        <div className="flex-1 min-w-0">
                                             <p className="text-[#169b46] font-semibold mb-1">{experience.company}</p>
-                                            <div className="flex items-center text-gray-500 text-sm mb-3"><FaCalendarAlt className="w-4 h-4 mr-2" />
+                                            <div className="flex items-center text-gray-500 text-sm">
+                                                <FaCalendarAlt className="w-4 h-4 mr-2 flex-shrink-0" />
                                                 <span>{experience.startDate} - {experience.endDate}</span>
                                             </div>
                                         </div>

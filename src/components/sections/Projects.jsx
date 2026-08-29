@@ -47,13 +47,14 @@ const Projects = ({ data }) => {
                         return (
                             <div ref={ref} key={index}>
                                 <SectionCard imageUrl={project.imageUrl} title={project.title} visible={isVisible} delay={index * 100}>
-                                    <p className="text-sm text-gray-600">{project.description}</p>
-                                    <div className="mt-2" />
-                                    <div className="mt-2">
-                                        {actions.map((a, i) => (
-                                            <span key={i} className="mr-2">{a}</span>
-                                        ))}
-                                    </div>
+                                    <p className="text-sm text-gray-600 leading-relaxed mb-4">{project.description}</p>
+                                    {actions.length > 0 && (
+                                        <div className="flex flex-row flex-wrap items-center gap-2 pt-2">
+                                            {actions.map((a, i) => (
+                                                <span key={i}>{a}</span>
+                                            ))}
+                                        </div>
+                                    )}
                                 </SectionCard>
                             </div>
                         );

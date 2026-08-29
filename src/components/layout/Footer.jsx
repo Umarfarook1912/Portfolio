@@ -31,9 +31,9 @@ const Footer = () => {
                     <div>
                         <h3 className="text-xl font-bold mb-4 text-white">About</h3>
                         <p className="text-white text-sm leading-relaxed mb-4">
-                            Full Stack Developer passionate about building modern web applications.
-                            Currently working as a Software Engineer at Sukiran Solutions,
-                            with expertise in MERN stack and experience as a Co-founder of StubLab.
+                            Full Stack Developer passionate about building modern web and mobile applications.
+                            Currently working as a Software Development Engineer at Teksage,
+                            with experience across Flutter, Next.js, React, and Python ecosystems.
                         </p>
                         <div className="flex flex-col space-y-2 text-sm">
                             <div className="flex items-center text-white">

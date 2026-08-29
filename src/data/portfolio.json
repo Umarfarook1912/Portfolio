@@ -2,7 +2,7 @@
     "hero": {
         "name": "Umar Farook J",
         "title": "Full Stack Developer",
-        "description": "Passionate developer with expertise in building modern web applications. I love creating elegant solutions to complex problems and bringing ideas to life through code.",
+        "description": "Passionate developer with expertise in building modern web applications, mobile apps, and scalable digital solutions. Experienced across Flutter, Next.js, React, Python, and cloud architectures.",
         "image": "/profile.jpg"
     },
     "workExperience": [
@@ -11,17 +11,17 @@
             "company": "Teksage",
             "startDate": "Jun 2026",
             "endDate": "Present",
-            "description": "Working on Flutter, Next.js, Python, and React projects. Developed the complete Teksage website and contributed new features to the mobile app and admin dashboard, focusing on responsive interfaces, clean implementation, and practical business workflows. Integrated Whatsapp API and Single Query feature for seamless communication and unified user experience.",
-            "projectUrl": "",
+            "description": "Working on Flutter, Next.js, Python, and React projects across the Teksage ecosystem. Developed the complete Teksage website and landing page (teksage.app), built the internal Teksage Feature Management platform for operations & rollout controls, and contributed key features to the Flutter mobile app including WhatsApp API integration, astrologer consultations, and Single Query workflows.",
+            "projectUrl": "https://teksage.app",
             "logoUrl": "/company/teksage.png"
         },
         {
             "title": "Software Engineer",
             "company": "Sukiran Solutions Private Limited",
-            "startDate": "Nov 2025",
+            "startDate": "Nov 2024",
             "endDate": "May 2025",
-            "description": "Working as a Software Engineer, contributing to the design and development of scalable web applications. Involved in building and maintaining frontend components using React.js and backend services using modern JavaScript frameworks. Collaborated with cross-functional teams to implement new features, optimize performance, and ensure clean, maintainable code following best practices.",
-            "projectUrl": "",
+            "description": "Contributed to the design and development of scalable web applications, prominently developing AI Diagram Maker (aidiagrammaker.com) — an AI-powered SaaS diagramming platform built with Next.js, React, D2 WASM, and LLM integrations. Designed intuitive user interfaces and developed robust backend services following clean architectural practices.",
+            "projectUrl": "https://sukiransolutions.in/",
             "logoUrl": "/company/sukiran.png"
         },
         {
@@ -44,6 +44,30 @@
         }
     ],
     "projects": [
+        {
+            "title": "AI Diagram Maker",
+            "description": "AI-powered SaaS diagramming platform built at Sukiran Solutions that transforms natural language prompts into professional software architecture and flow diagrams (D2 & Mermaid). Features real-time streaming compilation via D2 WASM, version history revisions, cost-based credit system, and multi-format SVG/PNG/PDF exports.",
+            "projectUrl": "https://aidiagrammaker.com",
+            "imageUrl": "/company/aidiagrammaker.png"
+        },
+        {
+            "title": "Teksage - Mobile App, Website & Landing Page",
+            "description": "Comprehensive astrology & spiritual guidance platform consisting of a cross-platform Flutter mobile app (Android & iOS), Next.js web application, and high-converting marketing landing page. Features live WebSocket consultations, WhatsApp API messaging, horoscope & panchang calculators, and payment checkout.",
+            "projectUrl": "https://teksage.app",
+            "imageUrl": "/company/teksage.png"
+        },
+        {
+            "title": "Teksage Feature Management",
+            "description": "Internal enterprise feature management & administrative portal for Teksage operations. Enables granular control over service catalogs, dynamic feature rollouts, discount coupons, astrologer slot scheduling, consultation workflows, and user engagement metrics.",
+            "projectUrl": "https://teksage-feature-management.vercel.app",
+            "imageUrl": "/project/teksage-feature.png"
+        },
+        {
+            "title": "MentorBridge Hub",
+            "description": "Official talent management and mentorship tracking platform designed for structured student and mentor engagement. Features role-based access control, real-time evaluation analytics, progress reporting, dynamic form builders, and data visualization dashboards.",
+            "projectUrl": "https://ilearn.mentorbridge.in",
+            "imageUrl": "/project/mentorbridge-hub.png"
+        },
         {
             "title": "GenUI Style Extractor",
             "description": "Figma plugin and design-to-code tool that extracts styles from Figma layers, webpages, and images, then converts them into production-ready CSS, Tailwind, or JSX — with px→rem conversion and copy/download handoff.",
