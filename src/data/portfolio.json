@@ -96,28 +96,82 @@
     ],
     "freelanceProjects": [
         {
-            "title": "Mariah Coirs",
-            "description": "India's premier manufacturer and exporter of premium coco peat blocks, coir fiber, grow bags, and coir products. Supplying 50+ countries since 2009.",
-            "projectUrl": "https://mariahcoirsexport.com",
-            "imageUrl": "/freelance/mariah.png"
+            "title": "Aasina Curry House",
+            "description": "Heritage Malaysian restaurant website with authentic menu showcases, multi-location finder, signature dish spotlights, and customer enquiry workflows.",
+            "projectUrl": "https://www.aasinacurryhouse.com/",
+            "imageUrl": "/freelance/aasinacurryhouse.png"
+        },
+        {
+            "title": "Civil Digital Store",
+            "description": "Specialized engineering software store for Revit, AutoCAD, Lumion, Tekla, calculation sheets, and ebooks — with WhatsApp order support.",
+            "projectUrl": "https://www.civildigitalstore.com/",
+            "imageUrl": "/freelance/civil.png"
+        },
+        {
+            "title": "Cloudora Luxury Homestay",
+            "description": "Luxury 5 BHK Kodaikanal villa website with immersive storytelling, package enquiries, gallery experiences, and conversion-focused booking CTAs.",
+            "projectUrl": "https://cloudora-web.vercel.app/",
+            "imageUrl": "/freelance/cloudora.png"
         },
         {
             "title": "Gifwoods",
             "description": "Premium personalized gifts crafted to celebrate every special moment — engraved, hand-packed, and delivered with intention.",
-            "projectUrl": "https://gifwoods.com",
+            "projectUrl": "https://gifwoods.com/",
             "imageUrl": "/freelance/gifwoods.png"
         },
         {
+            "title": "GiftieBags",
+            "description": "Dynamic ecommerce website for gift bags with a clean product browsing experience and responsive purchase flow.",
+            "projectUrl": "https://giftiebags.vercel.app/",
+            "imageUrl": "/freelance/giftiebags.png"
+        },
+        {
+            "title": "Healargo",
+            "description": "Natural wellness ecommerce store for cold-pressed oils and agro essentials — pure products, WhatsApp ordering, and a warm brand-led shopping experience.",
+            "projectUrl": "https://healargo.vercel.app/",
+            "imageUrl": "/freelance/healargo.png"
+        },
+        {
+            "title": "KS Build Kart",
+            "description": "Building materials catalog and lead-generation site for K.S. Steel Corporation covering steel, cement, pipes, paints, tools, and roofing.",
+            "projectUrl": "https://www.ksbuildkart.com/",
+            "imageUrl": "/freelance/ksbuildkart.png"
+        },
+        {
+            "title": "Mariah Coirs",
+            "description": "India's premier manufacturer and exporter of premium coco peat blocks, coir fiber, grow bags, and coir products. Supplying 50+ countries since 2009.",
+            "projectUrl": "https://mariahcoirsexport.com/",
+            "imageUrl": "/freelance/mariah.png"
+        },
+        {
+            "title": "NK Constructions",
+            "description": "Professional civil engineering, building design, approvals, and land surveying website for Thanjavur — built to convert visitors into consultation leads.",
+            "projectUrl": "https://www.nkconstruct.in/",
+            "imageUrl": "/freelance/nkconstruct.png"
+        },
+        {
+            "title": "Possible In Tech (PIT)",
+            "description": "Modern digital agency website for Possible In Tech — websites, ecommerce, SEO, analytics, and conversion-focused digital growth services.",
+            "projectUrl": "https://possibleintech.vercel.app/",
+            "imageUrl": "/freelance/possibleintech.png"
+        },
+        {
             "title": "SoftZCart",
-            "description": "Software / ecommerce website developed using the MERN stack and hosted on a VPS (Hostinger). Features include product management, user authentication, and checkout flow.",
+            "description": "Digital software marketplace with brand catalogs, instant license delivery, cart/checkout, and payment flows for engineering and IT products.",
             "projectUrl": "https://softzcart.com/",
             "imageUrl": "/freelance/softzcart.png"
         },
         {
-            "title": "Ecommerce Website for GiftieBags",
-            "description": "Developed a dynamic ecommerce website using HTML, CSS, JavaScript, and Bootstrap. Implemented a user-friendly interface for browsing and purchasing products.",
-            "projectUrl": "https://giftiebags.vercel.app/",
-            "imageUrl": "/freelance/giftiebags.png"
+            "title": "TomScope",
+            "description": "IT consulting and software development agency website with services, live project portfolio, consultation booking, and client-facing chat support.",
+            "projectUrl": "https://tomscope.com/",
+            "imageUrl": "/freelance/tomscope.png"
+        },
+        {
+            "title": "VS Oil Mill",
+            "description": "Direct-to-consumer store for traditional Mara Chekku wood-pressed oils and A2 ghee, with Pan-India shipping and WhatsApp reorder support.",
+            "projectUrl": "https://www.vsoilmill.com/",
+            "imageUrl": "/freelance/vsoil.png"
         }
     ],
     "education": [
