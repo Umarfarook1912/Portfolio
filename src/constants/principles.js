@@ -1,0 +1,51 @@
+export const DEVELOPMENT_PRINCIPLES = [
+  {
+    id: 'dry',
+    acronym: 'DRY',
+    title: "Don't Repeat Yourself",
+    description:
+      'Shared logic lives in one place — constants, utilities, and reusable components.',
+    trustPoint: 'Faster updates, fewer bugs, and a codebase that stays easy to scale.',
+    mapsTo: 'Maintainability',
+  },
+  {
+    id: 'simple',
+    acronym: 'Simple',
+    title: 'Keep It Simple',
+    description: 'No over-engineering. Every feature solves a real product need.',
+    trustPoint: 'Clear scope, predictable delivery, and solutions that stay easy to understand.',
+    mapsTo: 'Clarity',
+  },
+  {
+    id: 'lines',
+    acronym: '< 200',
+    title: 'Focused Files',
+    description: 'Files stay lean so code stays readable, reviewable, and easy to change.',
+    trustPoint: 'Quicker fixes when requirements change and cleaner handoffs.',
+    mapsTo: 'Quality',
+  },
+  {
+    id: 'global',
+    acronym: 'Global',
+    title: 'Centralized Config',
+    description: 'Routes, copy, and design tokens live in shared global files.',
+    trustPoint: 'Consistent branding and content updates without hunting through the codebase.',
+    mapsTo: 'Consistency',
+  },
+  {
+    id: 'reuse',
+    acronym: 'Reuse',
+    title: 'Reusable Components',
+    description: 'UI and logic are built once and composed across pages and features.',
+    trustPoint: 'Lower build cost and a polished, consistent user experience.',
+    mapsTo: 'Efficiency',
+  },
+  {
+    id: 'agile',
+    acronym: 'Agile',
+    title: 'Iterative Delivery',
+    description: 'Ship in short cycles with demos, feedback loops, and continuous improvement.',
+    trustPoint: 'You see real progress early and can steer before it’s too late.',
+    mapsTo: 'Transparency',
+  },
+];

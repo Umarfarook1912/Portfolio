@@ -2,6 +2,8 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Header, Footer } from './components/layout';
 import {
   Hero,
+  Services,
+  HowICode,
   WorkExperience,
   Projects,
   FreelanceProjects,
@@ -9,7 +11,7 @@ import {
   Certifications,
   Achievements,
   Contact,
-  TechnicalSkills
+  TechnicalSkills,
 } from './components/sections';
 import portfolioData from './data/portfolio.json';
 import './index.css';
@@ -26,10 +28,12 @@ const queryClient = new QueryClient({
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-surface text-ink">
         <Header />
         <main>
           <Hero data={portfolioData.hero} />
+          <Services />
+          <HowICode />
           <WorkExperience data={portfolioData.workExperience} />
           <Projects data={portfolioData.projects} />
           <FreelanceProjects data={portfolioData.freelanceProjects} />

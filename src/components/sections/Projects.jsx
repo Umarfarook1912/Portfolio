@@ -1,79 +1,21 @@
 import PropTypes from 'prop-types';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { Section, Container, SectionTitle } from '../ui';
-import SectionCard from '../ui/SectionCard';
-import { useScrollAnimation } from '../../hooks/useScrollAnimation';
+import ProjectShowcaseSection from '../showcase/ProjectShowcaseSection';
+import { SECTION_COPY } from '../../constants/site';
+import { SHOWCASE_COPY } from '../../constants/showcase';
 
-const Projects = ({ data }) => {
-    return (
-        <Section id="projects" background="gray">
-            <Container>
-                <SectionTitle
-                    title="Projects"
-                    subtitle="Some of my recent work and personal projects"
-                />
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {data.map((project, index) => {
-                        const [ref, isVisible] = useScrollAnimation({ threshold: 0.2 });
-                        const actions = [];
-                        if (project.githubUrl) {
-                            actions.push(
-                                <a
-                                    href={project.githubUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center justify-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-900 text-gray-700 hover:text-white rounded-lg transition-all duration-300 text-sm font-semibold shadow-sm hover:shadow-md"
-                                >
-                                    <FaGithub className="w-4 h-4" />
-                                    Code
-                                </a>
-                            );
-                        }
-                        if (project.projectUrl) {
-                            actions.push(
-                                <a
-                                    href={project.projectUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-[#169b46] to-[#50ca71] hover:from-[#50ca71] hover:to-[#169b46] text-white rounded-lg transition-all duration-300 text-sm font-semibold shadow-md shadow-green-200 hover:shadow-lg hover:shadow-green-300"
-                                >
-                                    <FaExternalLinkAlt className="w-4 h-4" />
-                                    Live
-                                </a>
-                            );
-                        }
-
-                        return (
-                            <div ref={ref} key={index}>
-                                <SectionCard imageUrl={project.imageUrl} title={project.title} visible={isVisible} delay={index * 100}>
-                                    <p className="text-sm text-gray-600 leading-relaxed mb-4">{project.description}</p>
-                                    {actions.length > 0 && (
-                                        <div className="flex flex-row flex-wrap items-center gap-2 pt-2">
-                                            {actions.map((a, i) => (
-                                                <span key={i}>{a}</span>
-                                            ))}
-                                        </div>
-                                    )}
-                                </SectionCard>
-                            </div>
-                        );
-                    })}
-                </div>
-            </Container>
-        </Section>
-    );
-};
+const Projects = ({ data }) => (
+  <ProjectShowcaseSection
+    id="projects"
+    title={SECTION_COPY.projects.title}
+    subtitle={SECTION_COPY.projects.subtitle}
+    items={data}
+    copy={SHOWCASE_COPY.projects}
+    background="gray"
+  />
+);
 
 Projects.propTypes = {
-    data: PropTypes.arrayOf(
-        PropTypes.shape({
-            title: PropTypes.string.isRequired,
-            description: PropTypes.string.isRequired,
-            githubUrl: PropTypes.string,
-            projectUrl: PropTypes.string,
-        })
-    ).isRequired,
+  data: PropTypes.array.isRequired,
 };
 
 export default Projects;

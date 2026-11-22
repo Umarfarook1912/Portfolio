@@ -1,12 +1,39 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-light: #50ca71;
-  --color-primary-dark: #169b46;
+  --color-ink: #111827;
+  --color-muted: #64748b;
+  --color-surface: #f4f6f5;
+  --color-surface-alt: #eef2ef;
+  --color-accent: #169b46;
+  --color-accent-soft: #e8f5ec;
+  --color-accent-light: #50ca71;
+  --color-footer: #0c1210;
+  --color-border: #e2e8e4;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .tilt-card,
+  .hero-portrait,
+  .float-3d {
+    transform: none !important;
+  }
 }
 
 body {
@@ -14,6 +41,108 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  color: var(--color-ink);
+  background: var(--color-surface);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-accent-soft);
+  color: var(--color-ink);
+}
+
+.hero-mesh {
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(22, 155, 70, 0.14), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 90% 10%, rgba(80, 202, 113, 0.12), transparent 50%),
+    radial-gradient(ellipse 60% 40% at 70% 90%, rgba(22, 155, 70, 0.08), transparent 50%),
+    linear-gradient(180deg, #f7f9f7 0%, #eef2ef 100%);
+}
+
+.section-fade {
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.section-fade.is-hidden {
+  opacity: 0;
+  transform: translateY(1.25rem);
+}
+
+.section-fade.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.perspective-scene {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.tilt-card:hover {
+  box-shadow:
+    0 22px 40px -24px rgba(17, 24, 39, 0.35),
+    0 0 0 1px rgba(22, 155, 70, 0.12);
+}
+
+.tilt-card-inner {
+  transform: translateZ(28px);
+}
+
+@keyframes floatY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.float-3d {
+  animation: floatY 6s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+.hero-ring {
+  animation: spinSlow 18s linear infinite;
+}
+
+.fade-up {
+  animation: fadeUp 0.8s ease both;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
