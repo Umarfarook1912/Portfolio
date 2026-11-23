@@ -21,7 +21,7 @@ const CredentialCard = ({
   const showImage = isImagePath(preview);
 
   return (
-    <FadeIn delay={delay} className="h-full">
+    <FadeIn delay={delay} className="h-full only:col-span-2 sm:only:col-span-1">
       <article className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-white transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_18px_40px_-28px_rgba(22,155,70,0.45)] sm:rounded-2xl">
         <div className="relative aspect-[16/10] overflow-hidden bg-surface-alt">
           {showImage ? (
