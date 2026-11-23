@@ -29,10 +29,10 @@ const HowICode = () => {
   }, [paused, goToNext]);
 
   return (
-    <section id="how-i-code" className="scroll-mt-24 bg-footer py-12 text-white sm:py-16">
+    <section id="how-i-code" className="scroll-mt-28 overflow-x-clip bg-footer py-12 text-white sm:scroll-mt-24 sm:py-16">
       <Container>
-        <FadeIn className="mb-10 max-w-2xl">
-          <p className="mb-2 text-[10px] font-bold uppercase tracking-widest text-accent-light">
+        <FadeIn className="mb-8 max-w-2xl sm:mb-10">
+          <p className="mb-2 text-[11px] font-bold uppercase tracking-widest text-accent-light">
             How I code
           </p>
           <h2 className="text-2xl font-bold leading-tight sm:text-3xl">
@@ -48,7 +48,7 @@ const HowICode = () => {
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
-          <div className="-mx-4 flex min-w-0 snap-x snap-mandatory gap-2 overflow-x-auto px-4 pb-1 scrollbar-hide sm:-mx-6 sm:px-6 lg:col-span-2 lg:mx-0 lg:grid lg:grid-cols-2 lg:overflow-visible lg:px-0 lg:pb-0">
+          <div className="-mx-4 flex min-w-0 snap-x snap-mandatory gap-2 overflow-x-auto overscroll-x-contain px-4 pb-2 scrollbar-hide sm:-mx-6 sm:px-6 lg:col-span-2 lg:mx-0 lg:grid lg:grid-cols-2 lg:overflow-visible lg:px-0 lg:pb-0">
             {DEVELOPMENT_PRINCIPLES.map((principle) => {
               const selected = activeId === principle.id;
               return (
@@ -57,7 +57,7 @@ const HowICode = () => {
                   type="button"
                   onClick={() => setActiveId(principle.id)}
                   className={cn(
-                    'w-[132px] shrink-0 snap-start rounded-lg border px-3 py-2.5 text-left transition-all duration-200 sm:w-auto sm:py-3 lg:w-auto lg:shrink',
+                    'min-h-14 w-[140px] shrink-0 snap-start rounded-lg border px-3 py-2.5 text-left transition-all duration-200 sm:w-auto sm:py-3 lg:min-h-0 lg:w-auto lg:shrink',
                     selected
                       ? 'border-accent bg-accent/15 shadow-[0_0_20px_rgba(22,155,70,0.25)]'
                       : 'border-slate-700 bg-white/5 hover:border-slate-500 hover:bg-white/10'
@@ -65,13 +65,13 @@ const HowICode = () => {
                 >
                   <span
                     className={cn(
-                      'block text-xs font-bold',
+                      'block text-sm font-bold sm:text-xs',
                       selected ? 'text-accent-light' : 'text-white'
                     )}
                   >
                     {principle.acronym}
                   </span>
-                  <span className="mt-0.5 block text-[10px] leading-tight text-slate-400">
+                  <span className="mt-0.5 block text-[11px] leading-tight text-slate-400 sm:text-[10px]">
                     {principle.mapsTo}
                   </span>
                 </button>

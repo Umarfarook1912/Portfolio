@@ -65,17 +65,17 @@ const Contact = () => {
           <p className="mb-2 text-[10px] font-bold uppercase tracking-widest text-accent">
             Contact
           </p>
-          <h2 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl md:text-5xl">
+          <h2 className="text-2xl font-bold tracking-tight text-ink sm:text-4xl md:text-5xl">
             {SECTION_COPY.contact.title}
           </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-base text-muted sm:text-lg">
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-muted sm:text-lg">
             {SECTION_COPY.contact.subtitle}
           </p>
         </FadeIn>
 
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-8">
           <FadeIn>
-            <aside className="h-full overflow-hidden rounded-2xl bg-footer p-6 text-white sm:p-8">
+            <aside className="h-full overflow-hidden rounded-2xl bg-footer p-5 text-white sm:p-8">
               <h3 className="text-xl font-bold">Let’s build something useful</h3>
               <p className="mt-3 text-sm leading-relaxed text-white/70">
                 Tell me about your product, freelance need, or role — I’ll reply with next steps.
@@ -114,7 +114,7 @@ const Contact = () => {
           <FadeIn delay={80}>
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="space-y-5 rounded-2xl border border-border bg-white p-6 shadow-sm sm:p-8 md:p-10"
+              className="space-y-5 rounded-2xl border border-border bg-white p-5 shadow-sm sm:p-8 md:p-10"
               noValidate
             >
               <div className="grid gap-5 sm:grid-cols-2">

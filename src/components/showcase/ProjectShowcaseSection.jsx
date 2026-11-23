@@ -37,22 +37,22 @@ const ProjectShowcaseSection = ({
   const bgClass = background === 'white' ? 'bg-white' : 'bg-gradient-to-b from-surface via-white to-surface';
 
   return (
-    <section id={id} className={`scroll-mt-24 py-12 sm:py-20 lg:py-24 ${bgClass}`}>
+    <section id={id} className={`scroll-mt-28 py-12 sm:scroll-mt-24 sm:py-20 lg:py-24 ${bgClass}`}>
       <Container>
-        <FadeIn className="mx-auto mb-8 max-w-3xl text-center sm:mb-12">
-          <div className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-accent/20 bg-accent-soft px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent sm:mb-4">
+        <FadeIn className="mx-auto mb-6 max-w-3xl text-center sm:mb-12">
+          <div className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-accent/20 bg-accent-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-accent sm:mb-4 sm:text-xs">
             <FaStar className="h-3 w-3 shrink-0" />
             <span>{copy.eyebrow}</span>
           </div>
           <h2 className="mb-3 text-2xl font-extrabold tracking-tight text-ink sm:mb-4 sm:text-4xl lg:text-5xl">
             {title}
           </h2>
-          <p className="mx-auto max-w-2xl text-xs leading-relaxed text-muted sm:text-base lg:text-lg">
+          <p className="mx-auto max-w-2xl text-sm leading-relaxed text-muted sm:text-base lg:text-lg">
             {subtitle}
           </p>
         </FadeIn>
 
-        <FadeIn delay={80} className="mb-10 sm:mb-14">
+        <FadeIn delay={80} className="mb-8 sm:mb-14">
           <ProjectSpotlight
             project={activeProject}
             index={activeIndex}

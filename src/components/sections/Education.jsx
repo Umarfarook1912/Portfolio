@@ -10,10 +10,10 @@ const Education = ({ data }) => (
         <p className="mb-2 text-[10px] font-bold uppercase tracking-widest text-accent">
           Academic path
         </p>
-        <h2 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+        <h2 className="text-2xl font-bold tracking-tight text-ink sm:text-4xl">
           {SECTION_COPY.education.title}
         </h2>
-        <p className="mt-3 max-w-2xl text-base text-muted sm:text-lg">
+        <p className="mt-3 max-w-2xl text-sm text-muted sm:text-lg">
           {SECTION_COPY.education.subtitle}
         </p>
       </FadeIn>

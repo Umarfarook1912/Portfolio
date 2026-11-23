@@ -9,15 +9,15 @@ const Achievements = ({ data }) => (
         <p className="mb-2 text-[10px] font-bold uppercase tracking-widest text-accent">
           Recognition
         </p>
-        <h2 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+        <h2 className="text-2xl font-bold tracking-tight text-ink sm:text-4xl">
           {SECTION_COPY.achievements.title}
         </h2>
-        <p className="mt-3 max-w-2xl text-base text-muted sm:text-lg">
+        <p className="mt-3 max-w-2xl text-sm text-muted sm:text-lg">
           {SECTION_COPY.achievements.subtitle}
         </p>
       </FadeIn>
 
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:gap-6">
+      <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:gap-6">
         {data.map((achievement, index) => (
           <CredentialCard
             key={`${achievement.title}-${index}`}

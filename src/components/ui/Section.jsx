@@ -10,7 +10,7 @@ const Section = ({ id, children, className = '', background = 'white' }) => {
   return (
     <section
       id={id}
-      className={`scroll-mt-24 py-16 sm:py-20 md:py-24 ${backgrounds[background]} ${className}`}
+      className={`scroll-mt-28 py-12 sm:scroll-mt-24 sm:py-20 md:py-24 ${backgrounds[background]} ${className}`}
     >
       {children}
     </section>

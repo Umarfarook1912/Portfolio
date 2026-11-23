@@ -23,9 +23,9 @@ const Button = ({
   };
 
   const sizes = {
-    sm: 'px-3.5 py-2 text-sm rounded-lg',
-    md: 'px-5 py-2.5 text-sm sm:text-base rounded-xl',
-    lg: 'px-6 py-3.5 text-base rounded-xl',
+    sm: 'min-h-10 px-3.5 py-2 text-sm rounded-lg',
+    md: 'min-h-11 px-5 py-2.5 text-sm sm:text-base rounded-xl',
+    lg: 'min-h-12 px-6 py-3.5 text-base rounded-xl',
   };
 
   const classes = `${base} ${variants[variant]} ${sizes[size]} ${className}`;

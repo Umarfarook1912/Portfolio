@@ -40,35 +40,37 @@ const ProjectGallery = ({ projects, activeId, onSelect, copy }) => (
                   loading="lazy"
                 />
               ) : null}
-              <span className="absolute left-2 top-2 rounded bg-ink/85 px-1.5 py-0.5 text-[9px] font-bold text-white backdrop-blur-md">
+              <span className="absolute left-1.5 top-1.5 rounded bg-ink/85 px-1.5 py-0.5 text-[9px] font-bold text-white backdrop-blur-md sm:left-2 sm:top-2">
                 {String(index + 1).padStart(2, '0')}
               </span>
               {selected && (
-                <span className="absolute right-2 top-2 rounded bg-accent px-1.5 py-0.5 text-[9px] font-bold text-white">
+                <span className="absolute right-1.5 top-1.5 rounded bg-accent px-1.5 py-0.5 text-[9px] font-bold text-white sm:right-2 sm:top-2">
                   Viewing
                 </span>
               )}
             </div>
 
-            <div className="flex flex-1 flex-col p-3 sm:p-4">
-              <p className="mb-1 text-[10px] font-bold uppercase tracking-wider text-accent">
+            <div className="flex flex-1 flex-col p-2.5 sm:p-4">
+              <p className="mb-0.5 text-[10px] font-bold uppercase tracking-wider text-accent sm:mb-1 sm:text-[11px]">
                 {project.category}
               </p>
-              <h4 className="mb-1 truncate text-xs font-bold text-ink transition-colors group-hover:text-accent sm:text-sm">
+              <h4 className="mb-1 line-clamp-2 text-xs font-bold text-ink transition-colors group-hover:text-accent sm:text-sm">
                 {project.name}
               </h4>
-              <p className="mb-3 line-clamp-2 flex-1 text-[10px] leading-relaxed text-slate-500 sm:text-xs">
+              <p className="mb-2 line-clamp-2 flex-1 text-[10px] leading-relaxed text-slate-500 sm:mb-3 sm:text-xs">
                 {project.description}
               </p>
-              <div className="flex items-center justify-between border-t border-border pt-2.5">
-                <span className="truncate pr-2 text-[10px] font-semibold text-slate-400">{host}</span>
+              <div className="flex items-center justify-between gap-1 border-t border-border pt-2 sm:gap-2 sm:pt-2.5">
+                <span className="min-w-0 truncate text-[10px] font-semibold text-slate-400 sm:text-[11px]">
+                  {host}
+                </span>
                 {project.projectUrl && project.projectUrl !== '#' && (
                   <a
                     href={project.projectUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(event) => event.stopPropagation()}
-                    className="rounded-md p-1 text-slate-400 transition-colors hover:bg-accent-soft hover:text-accent"
+                    className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-md text-slate-400 transition-colors hover:bg-accent-soft hover:text-accent sm:h-9 sm:w-9"
                     aria-label={`Open ${project.name}`}
                   >
                     <FaExternalLinkAlt className="h-3 w-3" />

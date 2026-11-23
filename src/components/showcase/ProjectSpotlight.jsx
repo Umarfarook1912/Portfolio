@@ -15,13 +15,13 @@ const ProjectSpotlight = ({ project, index, total, onPrev, onNext, copy }) => {
     <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-xl">
       <div className="grid lg:grid-cols-12">
         <div className="group relative flex flex-col overflow-hidden bg-slate-950 lg:col-span-7">
-          <div className="flex items-center justify-between gap-2 border-b border-slate-800 bg-slate-900/90 px-3.5 py-2.5 sm:px-4 sm:py-3">
+          <div className="flex items-center justify-between gap-2 border-b border-slate-800 bg-slate-900/90 px-3 py-2.5 sm:px-4 sm:py-3">
             <div className="flex shrink-0 items-center gap-1.5">
               <span className="h-2.5 w-2.5 rounded-full bg-rose-500/80" />
               <span className="h-2.5 w-2.5 rounded-full bg-amber-500/80" />
               <span className="h-2.5 w-2.5 rounded-full bg-emerald-500/80" />
             </div>
-            <div className="flex max-w-[60%] items-center gap-1.5 truncate rounded-md border border-slate-800 bg-slate-950/80 px-2.5 py-1 font-mono text-[10px] text-slate-400 sm:text-[11px]">
+            <div className="flex min-w-0 max-w-[55%] items-center gap-1.5 rounded-md border border-slate-800 bg-slate-950/80 px-2 py-1 font-mono text-[10px] text-slate-400 sm:max-w-[60%] sm:px-2.5 sm:text-[11px]">
               <FaGlobe className="h-2.5 w-2.5 shrink-0 text-accent-light" />
               <span className="truncate">{host}</span>
             </div>
@@ -41,12 +41,12 @@ const ProjectSpotlight = ({ project, index, total, onPrev, onNext, copy }) => {
               <div className="flex h-full items-center justify-center text-slate-500">No preview</div>
             )}
             {project.projectUrl && project.projectUrl !== '#' && (
-              <div className="absolute inset-x-0 bottom-0 flex items-end bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 sm:p-5">
+              <div className="absolute inset-x-0 bottom-0 flex items-end bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent p-3 opacity-100 sm:p-5 sm:opacity-0 sm:transition-opacity sm:duration-300 sm:group-hover:opacity-100">
                 <a
                   href={project.projectUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2 text-xs font-bold text-white shadow-lg hover:bg-ink"
+                  className="inline-flex min-h-10 items-center gap-2 rounded-lg bg-accent px-4 py-2 text-xs font-bold text-white shadow-lg hover:bg-ink"
                 >
                   {copy.visitLabel}
                   <FaExternalLinkAlt className="h-3 w-3" />
@@ -56,18 +56,18 @@ const ProjectSpotlight = ({ project, index, total, onPrev, onNext, copy }) => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-between p-5 sm:p-7 lg:col-span-5 lg:p-8">
+        <div className="flex flex-col justify-between p-4 sm:p-7 lg:col-span-5 lg:p-8">
           <div>
             <div className="mb-3 flex items-center justify-between gap-2">
               <span className="rounded-md border border-accent/20 bg-accent-soft px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-accent sm:text-[11px]">
                 {project.category}
               </span>
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-1.5">
                 <button
                   type="button"
                   onClick={onPrev}
                   aria-label={copy.prevLabel}
-                  className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-border text-muted transition-colors hover:border-accent hover:text-accent"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border text-muted transition-colors hover:border-accent hover:text-accent sm:h-8 sm:w-8"
                 >
                   <FaArrowLeft className="h-3 w-3" />
                 </button>
@@ -75,17 +75,17 @@ const ProjectSpotlight = ({ project, index, total, onPrev, onNext, copy }) => {
                   type="button"
                   onClick={onNext}
                   aria-label={copy.nextLabel}
-                  className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-border text-muted transition-colors hover:border-accent hover:text-accent"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border text-muted transition-colors hover:border-accent hover:text-accent sm:h-8 sm:w-8"
                 >
                   <FaArrowRight className="h-3 w-3" />
                 </button>
               </div>
             </div>
 
-            <h3 className="mb-2 text-xl font-bold tracking-tight text-ink sm:mb-3 sm:text-2xl lg:text-3xl">
+            <h3 className="mb-2 text-lg font-bold tracking-tight text-ink sm:mb-3 sm:text-2xl lg:text-3xl">
               {project.name}
             </h3>
-            <p className="mb-5 text-xs leading-relaxed text-muted sm:text-sm">{project.description}</p>
+            <p className="mb-5 text-sm leading-relaxed text-muted">{project.description}</p>
 
             {project.highlights?.length > 0 && (
               <>

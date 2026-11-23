@@ -24,14 +24,14 @@ const TechnicalSkills = ({ data }) => {
           subtitle={SECTION_COPY.skills.subtitle}
         />
 
-        <div className="mb-8 flex flex-wrap gap-2 sm:mb-10">
+        <div className="-mx-4 mb-8 flex gap-2 overflow-x-auto px-4 pb-1 scrollbar-hide sm:mx-0 sm:mb-10 sm:flex-wrap sm:overflow-visible sm:px-0 sm:pb-0">
           {categories.map((cat) => (
             <button
               key={cat}
               type="button"
               onClick={() => setActive(cat)}
               className={cn(
-                'rounded-full border px-3 py-1.5 text-xs font-medium transition-colors sm:px-4 sm:py-2 sm:text-sm',
+                'shrink-0 rounded-full border px-3.5 py-2 text-xs font-medium transition-colors sm:px-4 sm:text-sm',
                 active === cat
                   ? 'border-ink bg-ink text-white'
                   : 'border-border bg-white text-muted hover:border-accent/50 hover:text-accent'
@@ -44,7 +44,7 @@ const TechnicalSkills = ({ data }) => {
 
         <div
           key={active}
-          className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 md:grid-cols-4 lg:grid-cols-6"
+          className="grid grid-cols-2 gap-3 min-[480px]:grid-cols-3 sm:gap-4 md:grid-cols-4 lg:grid-cols-6"
         >
           {filtered.map((skill, index) => (
             <FadeIn key={`${skill.name}-${active}`} delay={index * 35}>

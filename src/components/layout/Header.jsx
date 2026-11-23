@@ -57,11 +57,11 @@ const Header = () => {
               : 'border-white/50 bg-white/70 backdrop-blur-sm'
           )}
         >
-          <a href="#home" className="flex items-center gap-2.5 pl-1">
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent text-sm font-bold text-white">
+          <a href="#home" className="flex min-w-0 items-center gap-2 pl-1 sm:gap-2.5">
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-accent text-sm font-bold text-white">
               UF
             </span>
-            <span className="hidden text-sm font-bold tracking-tight text-ink sm:inline sm:text-base">
+            <span className="truncate text-sm font-bold tracking-tight text-ink sm:text-base">
               Umar Farook <span className="text-accent">J</span>
             </span>
           </a>
@@ -83,20 +83,20 @@ const Header = () => {
             ))}
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex shrink-0 items-center gap-2">
             <Button
               href={SITE.RESUME_PATH}
               target="_blank"
               rel="noopener noreferrer"
               size="sm"
-              className="hidden sm:inline-flex"
+              className="!hidden sm:!inline-flex"
             >
               Resume
             </Button>
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen((open) => !open)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-border text-ink lg:hidden"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-border text-ink lg:hidden"
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-nav"
               aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
